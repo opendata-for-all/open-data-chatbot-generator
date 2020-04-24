@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_0EWiwGRPEeq-EIrEIiSs5Q" type="PapyrusUMLClassDiagram" name="Class Diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_5oA_oGRPEeq-EIrEIiSs5Q" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_5oF4IGRPEeq-EIrEIiSs5Q" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_5oF4IWRPEeq-EIrEIiSs5Q" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_5oGfMGRPEeq-EIrEIiSs5Q" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_5oHGQGRPEeq-EIrEIiSs5Q" type="Class_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_8WG9kGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qYorYGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8WG9kWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8Wq-QGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qYtj4GRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8Wq-QWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8XNw0GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qYxOQGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8XNw0WRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8X5tUGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qY0RkGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8X5tUWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8YjNkGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qY3U4GRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8YjNkWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8ZSNYGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qY6YMGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8ZSNYWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8aAmIGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qY9bgGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8aAmIWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8a1FgGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZAe0GRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8a1FgWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8bt2UGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZDiIGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8bt2UWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8csGsGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZHMgWRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8csGsWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8dgmEGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZKP0GRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8dgmEWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8eXhsGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZNTIGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8eXhsWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8e_MwGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZPvYGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8e_MwWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8fx28GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZSLoWRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8fx28WRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8grO0GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZUn4WRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8gr14GRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8htwoGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZY5UGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8htwoWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8jFCkGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZeY4WRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8jFCkWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8knToGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZiDQGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8knToWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8mIWkGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZltoGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8mIWkWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8m8O4GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qZtCYGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8m8O4WRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8otJcGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbDtQGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8otJcWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8q3FkGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbIlwGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8q3FkWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8sO-kGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbLCAGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8sO-kWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8tbRYGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbOFUWRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8tbRYWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8uoyUGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbRvsGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8uoyUWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8wcwMGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbUzAGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8wcwMWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8yEg0GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbX2UGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8yFH4GRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_8z0NQGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbbgsGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8z0NQWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_81Rl0GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbfLEGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_81Rl0WRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_82P2MGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbi1cWRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_82P2MWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_83OtoGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbl4wGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_83OtoWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_84QoYGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qbpjIGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_84QoYWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_85k3AGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qb4MoGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_85k3AWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_864ekGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qb73AGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_864ekWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_88H0sGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qb_hYGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_88H0sWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_89rT4GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcEZ4WRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_89rT4WRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9AkP0GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcHdMGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9AkP0WRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9B0NAGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcKggGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9B0NAWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9DoK4GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcM8wWRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9DoK4WRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9E9AkGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcR1QGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9E9AkWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9HJY8GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcU4kGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9HJY8WRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9IfcwGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcYi8GRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9IfcwWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9Jx2MGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcbmQGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9Jx2MWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9LH6AGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcfQoGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9LH6AWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9MnHwGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcjiEGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9MnHwWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9OHjoGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcl-UGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9OHjoWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9PkVIGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcpBoGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9PkVIWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9SaNwGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcsE8GRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9SaNwWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9T3mUGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qcw9cGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9T3mUWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9V3xcGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qc1O4GRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9V3xcWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9XvZsGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qc6HYGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9XvZsWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9ZVVIGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdD4YGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9ZVVIWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9a4NQGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdL0MGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9a4NQWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9crkEGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdO3gGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9crkEWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9eRfgGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdTI8GRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9eRfgWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9glzsGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdWMQGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9glzsWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9jZ3IGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdZ2oGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9jZ3IWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9ls9MGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdeIEGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9ls9MWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9nmaoGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdhLYGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9nmaoWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9paYgGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdjnoGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9paYgWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9rHosGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdmq8GRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9rHosWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9s3VIGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdq8YGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9s3VIWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9utIMGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdumwGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9utIMWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9weCwGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qdy4MWRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9weCwWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9zfhkGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qd1UcGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9zfhkWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_91V7sGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qd4-0WRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_91V7sWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_93OLAGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qd8CIGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_93OLAWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_95HBYGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qd-eYGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_95HBYWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_5oHGQWRPEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_5oHGQmRPEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_5oHGQ2RPEeq-EIrEIiSs5Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5oHGRGRPEeq-EIrEIiSs5Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_5oHGRWRPEeq-EIrEIiSs5Q" type="Class_OperationCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_5oHGRmRPEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_5oHGR2RPEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_5oHGSGRPEeq-EIrEIiSs5Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5oHGSWRPEeq-EIrEIiSs5Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_5oHGSmRPEeq-EIrEIiSs5Q" type="Class_NestedClassifierCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_5oHGS2RPEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_5oHGTGRPEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_5oHGTWRPEeq-EIrEIiSs5Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5oHGTmRPEeq-EIrEIiSs5Q"/>
+    </children>
+    <element xmi:type="uml:Class" href="air_quality_catalonia.uml#_qYjy4WRPEeq-EIrEIiSs5Q"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5oA_oWRPEeq-EIrEIiSs5Q" x="326" y="246"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_HF0okGRQEeq-EIrEIiSs5Q" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_HF1PoGRQEeq-EIrEIiSs5Q" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_HF1PoWRQEeq-EIrEIiSs5Q" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HF1PomRQEeq-EIrEIiSs5Q" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_HF1Po2RQEeq-EIrEIiSs5Q" type="Class_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_IHaBYGRQEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qeBhsGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IHaBYWRQEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_IIV1gGRQEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qeBhsmRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IIWckGRQEeq-EIrEIiSs5Q"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_HF1PpGRQEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HF1PpWRQEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HF1PpmRQEeq-EIrEIiSs5Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HF1Pp2RQEeq-EIrEIiSs5Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_HF1PqGRQEeq-EIrEIiSs5Q" type="Class_OperationCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_HF1PqWRQEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HF1PqmRQEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HF1Pq2RQEeq-EIrEIiSs5Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HF1PrGRQEeq-EIrEIiSs5Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_HF1PrWRQEeq-EIrEIiSs5Q" type="Class_NestedClassifierCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_HF1PrmRQEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HF1Pr2RQEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HF1PsGRQEeq-EIrEIiSs5Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HF1PsWRQEeq-EIrEIiSs5Q"/>
+    </children>
+    <element xmi:type="uml:Class" href="air_quality_catalonia.uml#_qeA6oGRPEeq-EIrEIiSs5Q"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HF0okWRQEeq-EIrEIiSs5Q" x="1080" y="240"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_ueD2YGRUEeq-EIrEIiSs5Q" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_ueEdcGRUEeq-EIrEIiSs5Q" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_ueEdcWRUEeq-EIrEIiSs5Q" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ueEdcmRUEeq-EIrEIiSs5Q" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ueFEgGRUEeq-EIrEIiSs5Q" type="Class_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_9680cGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qeD98WRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9680cWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_-BlA4GRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qeW44WRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_-BlA4WRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9-9KsGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qeJdgGRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9-9KsWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_99CfIGRPEeq-EIrEIiSs5Q" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="air_quality_catalonia.uml#_qeGaMWRPEeq-EIrEIiSs5Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_99CfIWRPEeq-EIrEIiSs5Q"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_ueFEgWRUEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ueFEgmRUEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ueFEg2RUEeq-EIrEIiSs5Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ueFEhGRUEeq-EIrEIiSs5Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ueFEhWRUEeq-EIrEIiSs5Q" type="Class_OperationCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_ueFEhmRUEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ueFEh2RUEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ueFEiGRUEeq-EIrEIiSs5Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ueFEiWRUEeq-EIrEIiSs5Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ueFEimRUEeq-EIrEIiSs5Q" type="Class_NestedClassifierCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_ueFEi2RUEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ueFEjGRUEeq-EIrEIiSs5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ueFEjWRUEeq-EIrEIiSs5Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ueFEjmRUEeq-EIrEIiSs5Q"/>
+    </children>
+    <element xmi:type="uml:Class" href="air_quality_catalonia.uml#_udvtUGRUEeq-EIrEIiSs5Q"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ueD2YWRUEeq-EIrEIiSs5Q" x="-300" y="240"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_2459oG0ZEeqzb-_aHGzzPQ" type="StereotypeComment">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NkQ7QG0aEeqzb-_aHGzzPQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NkQ7QW0aEeqzb-_aHGzzPQ" key="visible" value="true"/>
+    </eAnnotations>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_247y0G0ZEeqzb-_aHGzzPQ" type="StereotypeCompartment">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NkPtIG0aEeqzb-_aHGzzPQ" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NkQUMG0aEeqzb-_aHGzzPQ" key="visible" value="true"/>
+      </eAnnotations>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_247y0W0ZEeqzb-_aHGzzPQ"/>
+      <styles xmi:type="notation:StringValueStyle" xmi:id="_247y0m0ZEeqzb-_aHGzzPQ" name="stereotype" stringValue="OpenData::OpenDataAPIDetails"/>
+      <element xmi:type="uml:Stereotype" href="pathmap://ODA_PROFILES/opendata.profile.uml#_5EdpIF4ZEeqZ2b8whOQ_qA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_247y020ZEeqzb-_aHGzzPQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_24-PEG0ZEeqzb-_aHGzzPQ" type="StereotypeCompartment">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OpEnMG0aEeqzb-_aHGzzPQ" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OpEnMW0aEeqzb-_aHGzzPQ" key="visible" value="true"/>
+      </eAnnotations>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_24-PEW0ZEeqzb-_aHGzzPQ"/>
+      <styles xmi:type="notation:StringValueStyle" xmi:id="_24-PEm0ZEeqzb-_aHGzzPQ" name="stereotype" stringValue="ChatbotProfile::ClassConfig"/>
+      <element xmi:type="uml:Stereotype" href="pathmap://XATKIT_PROFILES/chatbot.profile.uml#_MR3hAFeqEeqAbujxkiIJqg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_24-PE20ZEeqzb-_aHGzzPQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_24-2IG0ZEeqzb-_aHGzzPQ" type="StereotypeCompartment">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O2O5cG0aEeqzb-_aHGzzPQ" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O2O5cW0aEeqzb-_aHGzzPQ" key="visible" value="true"/>
+      </eAnnotations>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_24-2IW0ZEeqzb-_aHGzzPQ"/>
+      <styles xmi:type="notation:StringValueStyle" xmi:id="_24-2Im0ZEeqzb-_aHGzzPQ" name="stereotype" stringValue="ChatbotProfile::BotVocabulary"/>
+      <element xmi:type="uml:Stereotype" href="pathmap://XATKIT_PROFILES/chatbot.profile.uml#_-KNIAENLEeqnD_vI3FyI2w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_24-2I20ZEeqzb-_aHGzzPQ"/>
+    </children>
+    <styles xmi:type="notation:TitleStyle" xmi:id="_2459oW0ZEeqzb-_aHGzzPQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_2459o20ZEeqzb-_aHGzzPQ" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="air_quality_catalonia.uml#_qYjy4WRPEeq-EIrEIiSs5Q"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2459om0ZEeqzb-_aHGzzPQ" x="220" y="-200" width="461"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_2_Wj4G0ZEeqzb-_aHGzzPQ" type="StereotypeComment">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cK3_UW0aEeqzb-_aHGzzPQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cK3_Um0aEeqzb-_aHGzzPQ" key="visible" value="true"/>
+    </eAnnotations>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_2_XyAG0ZEeqzb-_aHGzzPQ" type="StereotypeCompartment">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cK3YQG0aEeqzb-_aHGzzPQ" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cK3_UG0aEeqzb-_aHGzzPQ" key="visible" value="true"/>
+      </eAnnotations>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_2_XyAW0ZEeqzb-_aHGzzPQ"/>
+      <styles xmi:type="notation:StringValueStyle" xmi:id="_2_XyAm0ZEeqzb-_aHGzzPQ" name="stereotype" stringValue="OpenData::SocrataFieldType"/>
+      <element xmi:type="uml:Stereotype" href="pathmap://ODA_PROFILES/opendata.profile.uml#_yIS8cGOkEeqVtvFqmzk5Gg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2_XyA20ZEeqzb-_aHGzzPQ"/>
+    </children>
+    <styles xmi:type="notation:TitleStyle" xmi:id="_2_Wj4W0ZEeqzb-_aHGzzPQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_2_Wj420ZEeqzb-_aHGzzPQ" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="air_quality_catalonia.uml#_qeA6oGRPEeq-EIrEIiSs5Q"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2_Wj4m0ZEeqzb-_aHGzzPQ" x="1120" y="80" width="140"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_0EWiwWRPEeq-EIrEIiSs5Q" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_0EWiwmRPEeq-EIrEIiSs5Q"/>
+  <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_0EWiw2RPEeq-EIrEIiSs5Q" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
+    <owner xmi:type="uml:Package" href="air_quality_catalonia.uml#_qYjL0GRPEeq-EIrEIiSs5Q"/>
+  </styles>
+  <element xmi:type="uml:Package" href="air_quality_catalonia.uml#_qYjL0GRPEeq-EIrEIiSs5Q"/>
+  <edges xmi:type="notation:Connector" xmi:id="_Ib9VEGRQEeq-EIrEIiSs5Q" type="Association_Edge" source="_HF0okGRQEeq-EIrEIiSs5Q" target="_5oA_oGRPEeq-EIrEIiSs5Q">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ib98IGRQEeq-EIrEIiSs5Q" type="Association_StereotypeLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_2hGDQGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Ib98IWRQEeq-EIrEIiSs5Q" x="1" y="-19"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ib98ImRQEeq-EIrEIiSs5Q" type="Association_NameLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_2iJMIGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Ib98I2RQEeq-EIrEIiSs5Q" x="-1" y="18"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ib98JGRQEeq-EIrEIiSs5Q" type="Association_TargetRoleLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_2jw8wGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Ib98JWRQEeq-EIrEIiSs5Q" x="103" y="-18"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ib98JmRQEeq-EIrEIiSs5Q" type="Association_SourceRoleLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_2k0FoGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Ib98J2RQEeq-EIrEIiSs5Q" x="-48" y="33"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ib98KGRQEeq-EIrEIiSs5Q" type="Association_SourceMultiplicityLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_2l5qwGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Ib98KWRQEeq-EIrEIiSs5Q" x="102" y="18"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ib98KmRQEeq-EIrEIiSs5Q" type="Association_TargetMultiplicityLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_2nMrQGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Ib98K2RQEeq-EIrEIiSs5Q" x="-102" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Ib9VEWRQEeq-EIrEIiSs5Q"/>
+    <element xmi:type="uml:Association" href="air_quality_catalonia.uml#_qeBhtGRPEeq-EIrEIiSs5Q"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Ib9VEmRQEeq-EIrEIiSs5Q" points="[1080, 367, -643984, -643984]$[778, 640, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2oaMMGRVEeq-EIrEIiSs5Q" id="(0.0,0.6299212598425197)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2oaMMWRVEeq-EIrEIiSs5Q" id="(1.0,0.06255283178360102)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_hFYvoGRVEeq-EIrEIiSs5Q" type="Association_Edge" source="_5oA_oGRPEeq-EIrEIiSs5Q" target="_ueD2YGRUEeq-EIrEIiSs5Q">
+    <children xmi:type="notation:DecorationNode" xmi:id="_hFZWsGRVEeq-EIrEIiSs5Q" type="Association_StereotypeLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_1t8IAGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hFZWsWRVEeq-EIrEIiSs5Q" y="-20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_hFZWsmRVEeq-EIrEIiSs5Q" type="Association_NameLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_1u040GRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hFZWs2RVEeq-EIrEIiSs5Q" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_hFZWtGRVEeq-EIrEIiSs5Q" type="Association_TargetRoleLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_1v524GRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hFZWtWRVEeq-EIrEIiSs5Q" x="57" y="-20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_hFZWtmRVEeq-EIrEIiSs5Q" type="Association_SourceRoleLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_1w2SEGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hFZWt2RVEeq-EIrEIiSs5Q" x="-57" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_hFZWuGRVEeq-EIrEIiSs5Q" type="Association_SourceMultiplicityLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_1ybmcGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hFZWuWRVEeq-EIrEIiSs5Q" x="57" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_hFZWumRVEeq-EIrEIiSs5Q" type="Association_TargetMultiplicityLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_1zTwMGRVEeq-EIrEIiSs5Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hFZWu2RVEeq-EIrEIiSs5Q" x="-57" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_hFYvoWRVEeq-EIrEIiSs5Q"/>
+    <element xmi:type="uml:Association" href="air_quality_catalonia.uml#_hCi3AGRVEeq-EIrEIiSs5Q"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hFYvomRVEeq-EIrEIiSs5Q" points="[326, 860, -643984, -643984]$[136, 860, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hIJvwGRVEeq-EIrEIiSs5Q" id="(0.0,0.06255283178360102)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hIJvwWRVEeq-EIrEIiSs5Q" id="(1.0,0.5555555555555556)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_246ksG0ZEeqzb-_aHGzzPQ" type="StereotypeCommentLink" source="_5oA_oGRPEeq-EIrEIiSs5Q" target="_2459oG0ZEeqzb-_aHGzzPQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_246ksW0ZEeqzb-_aHGzzPQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_247LwG0ZEeqzb-_aHGzzPQ" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="air_quality_catalonia.uml#_qYjy4WRPEeq-EIrEIiSs5Q"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_246ksm0ZEeqzb-_aHGzzPQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_246ks20ZEeqzb-_aHGzzPQ" id="(0.5176991150442478,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_246ktG0ZEeqzb-_aHGzzPQ" id="(0.462762111352133,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_2_XK8G0ZEeqzb-_aHGzzPQ" type="StereotypeCommentLink" source="_HF0okGRQEeq-EIrEIiSs5Q" target="_2_Wj4G0ZEeqzb-_aHGzzPQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_2_XK8W0ZEeqzb-_aHGzzPQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_2_XK9W0ZEeqzb-_aHGzzPQ" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="air_quality_catalonia.uml#_qeA6oGRPEeq-EIrEIiSs5Q"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2_XK8m0ZEeqzb-_aHGzzPQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2_XK820ZEeqzb-_aHGzzPQ" id="(0.7741935483870968,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2_XK9G0ZEeqzb-_aHGzzPQ" id="(0.2785714285714286,1.0)"/>
+  </edges>
+</notation:Diagram>

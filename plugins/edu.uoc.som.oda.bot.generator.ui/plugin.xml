@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any">
+         <menu
+               icon="images/icon.png"
+               label="Xatkit">
+            <command
+                  commandId="edu.uoc.som.oda.bot.generator.ui.handlers.GenerateChatbotFromUML"
+                  label="Generate the chatbot"
+                  style="push"
+                  tooltip="Generate a chatbot from an annotated UML model">
+               <visibleWhen
+                     checkEnabled="false">
+                  <iterate>
+                     <and>
+                        <test
+                              property="org.eclipse.core.resources.extension"
+                              value="uml">
+                        </test>
+                     </and>
+                  </iterate>
+               </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="edu.uoc.som.oda.bot.generator.ui.handlers.GenerateChatbotFromUML"
+            id="edu.uoc.som.oda.bot.generator.ui.handlers.GenerateChatbotFromUML"
+            name="Generate the chatbot">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <category
+            id="edu.uoc.som.oda.bot.generator.ui.opendata.importer"
+            name="Open Data for All">
+      </category>
+      <wizard
+            category="edu.uoc.som.oda.bot.generator.ui.opendata.importer"
+            class="edu.uoc.som.oda.bot.generator.ui.wizards.OpenDataImporterWizard"
+            icon="images/oda-icon-small-square.png"
+            id="edu.uoc.som.oda.bot.generator.ui.opendata.importer.wizard"
+            name="Open Data Chatbot model">
+      </wizard>
+   </extension>
+
+</plugin>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:chatbot="http://xatkit.com/chatbot/profile/1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:oda="http://uoc.edu/som/oda/profile/1.0" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_qVkwUGRPEeq-EIrEIiSs5Q" name="air_quality_catalonia">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_0E1D4GRPEeq-EIrEIiSs5Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_qYjL0GRPEeq-EIrEIiSs5Q" name="DataModel">
+      <packagedElement xmi:type="uml:Class" xmi:id="_qYjy4WRPEeq-EIrEIiSs5Q" name="AirQualityData">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qYorYGRPEeq-EIrEIiSs5Q" name="MeasurementCode" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qYtj4GRPEeq-EIrEIiSs5Q" name="EOICode" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qYxOQGRPEeq-EIrEIiSs5Q" name="Province" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qY0RkGRPEeq-EIrEIiSs5Q" name="MunicipalityCode" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qY3U4GRPEeq-EIrEIiSs5Q" name="StationCode" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qY6YMGRPEeq-EIrEIiSs5Q" name="StationName" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qY9bgGRPEeq-EIrEIiSs5Q" name="Municipality" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZAe0GRPEeq-EIrEIiSs5Q" name="Latitude" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZDiIGRPEeq-EIrEIiSs5Q" name="Longitude" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZHMgWRPEeq-EIrEIiSs5Q" name="Altitude" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZKP0GRPEeq-EIrEIiSs5Q" name="StationType" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZNTIGRPEeq-EIrEIiSs5Q" name="UrbanArea" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZPvYGRPEeq-EIrEIiSs5Q" name="Magnitude" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZSLoWRPEeq-EIrEIiSs5Q" name="Pollutant" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZUn4WRPEeq-EIrEIiSs5Q" name="Units" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZY5UGRPEeq-EIrEIiSs5Q" name="SamplePoint" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZeY4WRPEeq-EIrEIiSs5Q" name="Year" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZiDQGRPEeq-EIrEIiSs5Q" name="Month" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZltoGRPEeq-EIrEIiSs5Q" name="Day" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZtCYGRPEeq-EIrEIiSs5Q" name="Date" type="_qbB4EGRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbDtQGRPEeq-EIrEIiSs5Q" name="H01" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbIlwGRPEeq-EIrEIiSs5Q" name="V01" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbLCAGRPEeq-EIrEIiSs5Q" name="H02" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbOFUWRPEeq-EIrEIiSs5Q" name="V02" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbRvsGRPEeq-EIrEIiSs5Q" name="H03" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbUzAGRPEeq-EIrEIiSs5Q" name="V03" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbX2UGRPEeq-EIrEIiSs5Q" name="H04" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbbgsGRPEeq-EIrEIiSs5Q" name="V04" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbfLEGRPEeq-EIrEIiSs5Q" name="H05" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbi1cWRPEeq-EIrEIiSs5Q" name="V05" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbl4wGRPEeq-EIrEIiSs5Q" name="H06" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qbpjIGRPEeq-EIrEIiSs5Q" name="V06" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qb4MoGRPEeq-EIrEIiSs5Q" name="H07" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qb73AGRPEeq-EIrEIiSs5Q" name="V07" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qb_hYGRPEeq-EIrEIiSs5Q" name="H08" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcEZ4WRPEeq-EIrEIiSs5Q" name="V08" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcHdMGRPEeq-EIrEIiSs5Q" name="H09" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcKggGRPEeq-EIrEIiSs5Q" name="V09" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcM8wWRPEeq-EIrEIiSs5Q" name="H10" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcR1QGRPEeq-EIrEIiSs5Q" name="V10" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcU4kGRPEeq-EIrEIiSs5Q" name="H11" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcYi8GRPEeq-EIrEIiSs5Q" name="V11" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcbmQGRPEeq-EIrEIiSs5Q" name="H12" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcfQoGRPEeq-EIrEIiSs5Q" name="V12" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcjiEGRPEeq-EIrEIiSs5Q" name="H13" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcl-UGRPEeq-EIrEIiSs5Q" name="V13" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcpBoGRPEeq-EIrEIiSs5Q" name="H14" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcsE8GRPEeq-EIrEIiSs5Q" name="V14" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qcw9cGRPEeq-EIrEIiSs5Q" name="H15" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qc1O4GRPEeq-EIrEIiSs5Q" name="V15" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qc6HYGRPEeq-EIrEIiSs5Q" name="H16" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdD4YGRPEeq-EIrEIiSs5Q" name="V16" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdL0MGRPEeq-EIrEIiSs5Q" name="H17" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdO3gGRPEeq-EIrEIiSs5Q" name="V17" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdTI8GRPEeq-EIrEIiSs5Q" name="H18" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdWMQGRPEeq-EIrEIiSs5Q" name="V18" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdZ2oGRPEeq-EIrEIiSs5Q" name="H19" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdeIEGRPEeq-EIrEIiSs5Q" name="V19" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdhLYGRPEeq-EIrEIiSs5Q" name="H20" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdjnoGRPEeq-EIrEIiSs5Q" name="V20" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdmq8GRPEeq-EIrEIiSs5Q" name="H21" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdq8YGRPEeq-EIrEIiSs5Q" name="V21" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdumwGRPEeq-EIrEIiSs5Q" name="H22" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdy4MWRPEeq-EIrEIiSs5Q" name="V22" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qd1UcGRPEeq-EIrEIiSs5Q" name="H23" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qd4-0WRPEeq-EIrEIiSs5Q" name="V23" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qd8CIGRPEeq-EIrEIiSs5Q" name="H24" type="_qYvZEWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qd-eYGRPEeq-EIrEIiSs5Q" name="V24" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qeA6oGRPEeq-EIrEIiSs5Q" name="Location">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qeBhsGRPEeq-EIrEIiSs5Q" name="longitude" type="_qeA6oWRPEeq-EIrEIiSs5Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qeBhsWRPEeq-EIrEIiSs5Q" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qeBhsmRPEeq-EIrEIiSs5Q" name="latitude" type="_qeA6oWRPEeq-EIrEIiSs5Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qeBhs2RPEeq-EIrEIiSs5Q" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_qeBhtGRPEeq-EIrEIiSs5Q" name="Record_Point" memberEnd="_qeBhtWRPEeq-EIrEIiSs5Q _qeBhtmRPEeq-EIrEIiSs5Q" navigableOwnedEnd="_qeBhtmRPEeq-EIrEIiSs5Q">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_qeBhtWRPEeq-EIrEIiSs5Q" name="Record" type="_qYjy4WRPEeq-EIrEIiSs5Q" association="_qeBhtGRPEeq-EIrEIiSs5Q"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_qeBhtmRPEeq-EIrEIiSs5Q" name="Georeferència" type="_qeA6oGRPEeq-EIrEIiSs5Q" aggregation="composite" association="_qeBhtGRPEeq-EIrEIiSs5Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qeBht2RPEeq-EIrEIiSs5Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qeBhuGRPEeq-EIrEIiSs5Q" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_udvtUGRUEeq-EIrEIiSs5Q" name="Address">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qeD98WRPEeq-EIrEIiSs5Q" name="Address" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qeW44WRPEeq-EIrEIiSs5Q" name="Zip" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qeJdgGRPEeq-EIrEIiSs5Q" name="State" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qeGaMWRPEeq-EIrEIiSs5Q" name="City" type="_qYqgkWRPEeq-EIrEIiSs5Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_hCi3AGRVEeq-EIrEIiSs5Q" memberEnd="_hCnvgGRVEeq-EIrEIiSs5Q _hCoWkWRVEeq-EIrEIiSs5Q" navigableOwnedEnd="_hCnvgGRVEeq-EIrEIiSs5Q">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hClTQGRVEeq-EIrEIiSs5Q" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hCl6UGRVEeq-EIrEIiSs5Q" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_hCoWkWRVEeq-EIrEIiSs5Q" name="airqualitydata" type="_qYjy4WRPEeq-EIrEIiSs5Q" association="_hCi3AGRVEeq-EIrEIiSs5Q"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_hCnvgGRVEeq-EIrEIiSs5Q" name="address" type="_udvtUGRUEeq-EIrEIiSs5Q" aggregation="composite" association="_hCi3AGRVEeq-EIrEIiSs5Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hCnvgWRVEeq-EIrEIiSs5Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hCoWkGRVEeq-EIrEIiSs5Q" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_qYjy4GRPEeq-EIrEIiSs5Q" name="types">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qYqgkWRPEeq-EIrEIiSs5Q" name="String"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qYvZEWRPEeq-EIrEIiSs5Q" name="Number"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qbB4EGRPEeq-EIrEIiSs5Q" name="Date"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qeA6oWRPEeq-EIrEIiSs5Q" name="Double"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qVlXYGRPEeq-EIrEIiSs5Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qVlXYWRPEeq-EIrEIiSs5Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://xatkit.com/chatbot/profile/1.0#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://XATKIT_PROFILES/chatbot.profile.uml#_8zK3wHyGEemaV87q0fd26g"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qVl-cGRPEeq-EIrEIiSs5Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qVl-cWRPEeq-EIrEIiSs5Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://uoc.edu/som/oda/profile/1.0#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://ODA_PROFILES/opendata.profile.uml#_bgjfUF4ZEeqZ2b8whOQ_qA"/>
+    </profileApplication>
+  </uml:Model>
+  <oda:OpenDataAPIDetails xmi:id="_qYlBAGRPEeq-EIrEIiSs5Q" base_Class="_qYjy4WRPEeq-EIrEIiSs5Q" id="uy6k-2s8r" name="Immission data of the measuring points of the Atmospheric Pollution Monitoring and Forecasting Network" category="Environment" dataUri="https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r" description="Available hourly data of pollutants measured at the Measurement Points of the Air Pollution Monitoring and Forecasting Network from 1991 to the day before the current one. This information is updated daily. Apart from the concentration of the different pollutants, you can also consult: the coordinates where the measuring point is located, the type of station, the units and the date of discharge and discharge." domain="analisi.transparenciacatalunya.cat" license="Open Data Commons Attribution License" webUri="https://analisi.transparenciacatalunya.cat/d/uy6k-2s8r" apiType="socrata" apiTypeVersion="2.1">
+    <tags>data</tags>
+    <tags>air quality</tags>
+    <tags>pollution</tags>
+    <tags>xvpca</tags>
+  </oda:OpenDataAPIDetails>
+  <chatbot:ClassConfig xmi:id="_qYndQGRPEeq-EIrEIiSs5Q" toExpose="true" base_Class="_qYjy4WRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qYoEUGRPEeq-EIrEIiSs5Q" outputName="Air quality data in Catalonia" base_NamedElement="_qYjy4WRPEeq-EIrEIiSs5Q">
+    <synonyms>air quality</synonyms>
+    <synonyms>air quality data</synonyms>
+    <synonyms>pollution data</synonyms>
+  </chatbot:BotVocabulary>
+  <chatbot:PropertyConfig xmi:id="_qYpScGRPEeq-EIrEIiSs5Q" base_Property="_qYorYGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qYqgkGRPEeq-EIrEIiSs5Q" outputName="measurement code" base_NamedElement="_qYorYGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataFieldType xmi:id="_qYrHoGRPEeq-EIrEIiSs5Q" base_Type="_qYqgkWRPEeq-EIrEIiSs5Q" type="Text"/>
+  <oda:SocrataField xmi:id="_qYs80GRPEeq-EIrEIiSs5Q" base_Property="_qYorYGRPEeq-EIrEIiSs5Q" name="CODI MESURAMENT" description="Camp únic format per la concatenació de: Codi EOI_Codi contaminant_AnyMesDia" fieldName="codi_mesurament"/>
+  <chatbot:PropertyConfig xmi:id="_qYuK8GRPEeq-EIrEIiSs5Q" base_Property="_qYtj4GRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qYvZEGRPEeq-EIrEIiSs5Q" outputName="CODI EOI" base_NamedElement="_qYtj4GRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataFieldType xmi:id="_qYwAIGRPEeq-EIrEIiSs5Q" base_Type="_qYvZEWRPEeq-EIrEIiSs5Q" type="Number"/>
+  <oda:SocrataField xmi:id="_qYwnMGRPEeq-EIrEIiSs5Q" base_Property="_qYtj4GRPEeq-EIrEIiSs5Q" name="CODI EOI" description="Format per: Codi Província, Codi Municipi i Codi Estació" fieldName="codi_eoi"/>
+  <chatbot:PropertyConfig xmi:id="_qYxOQWRPEeq-EIrEIiSs5Q" base_Property="_qYxOQGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qYycYGRPEeq-EIrEIiSs5Q" outputName="province" base_NamedElement="_qYxOQGRPEeq-EIrEIiSs5Q">
+    <synonyms>district</synonyms>
+  </chatbot:BotVocabulary>
+  <oda:SocrataField xmi:id="_qYzqgGRPEeq-EIrEIiSs5Q" base_Property="_qYxOQGRPEeq-EIrEIiSs5Q" name="PROVINCIA" description="Codi numèric corresponent a la província (08- Barcelona / 17 – Girona / 25 -Lleida / 43 -Tarragona)" fieldName="provincia"/>
+  <chatbot:PropertyConfig xmi:id="_qY04oGRPEeq-EIrEIiSs5Q" base_Property="_qY0RkGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qY1fsGRPEeq-EIrEIiSs5Q" outputName="municipality code" base_NamedElement="_qY0RkGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qY2t0GRPEeq-EIrEIiSs5Q" base_Property="_qY0RkGRPEeq-EIrEIiSs5Q" name="CODI MUNICIPI" description="Codi numèric corresponent al municipi" fieldName="codi_mun"/>
+  <chatbot:PropertyConfig xmi:id="_qY3U4WRPEeq-EIrEIiSs5Q" base_Property="_qY3U4GRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qY4jAGRPEeq-EIrEIiSs5Q" outputName="CODI ESTACIÓ" base_NamedElement="_qY3U4GRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qY5xIGRPEeq-EIrEIiSs5Q" base_Property="_qY3U4GRPEeq-EIrEIiSs5Q" name="CODI ESTACIÓ" description="Codi numèric corresponent a l’estació" fieldName="codi_estaci"/>
+  <chatbot:PropertyConfig xmi:id="_qY6_QGRPEeq-EIrEIiSs5Q" toExpose="true" base_Property="_qY6YMGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qY7mUGRPEeq-EIrEIiSs5Q" outputName="Station name" base_NamedElement="_qY6YMGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qY80cGRPEeq-EIrEIiSs5Q" base_Property="_qY6YMGRPEeq-EIrEIiSs5Q" name="NOM ESTACIÓ" description="Nom de la cabina. Valor alfanumèric d’uns 100 caràcters. Per exemple: Perafort (Puigdelfí)" fieldName="nom_estaci"/>
+  <chatbot:PropertyConfig xmi:id="_qY-CkGRPEeq-EIrEIiSs5Q" toExpose="true" toFilterWith="true" base_Property="_qY9bgGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qY-poGRPEeq-EIrEIiSs5Q" outputName="Municipality" base_NamedElement="_qY9bgGRPEeq-EIrEIiSs5Q">
+    <synonyms>town</synonyms>
+    <synonyms>city</synonyms>
+  </chatbot:BotVocabulary>
+  <oda:SocrataField xmi:id="_qY_3wGRPEeq-EIrEIiSs5Q" base_Property="_qY9bgGRPEeq-EIrEIiSs5Q" name="MUNICIPI" description="Nom del municipi on es troba la cabina. Valor alfanumèric d’uns 100 caràcters. Per exemple: Perafort" fieldName="municipi"/>
+  <chatbot:PropertyConfig xmi:id="_qZBF4GRPEeq-EIrEIiSs5Q" base_Property="_qZAe0GRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZBs8GRPEeq-EIrEIiSs5Q" outputName="LATITUD" base_NamedElement="_qZAe0GRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZC7EGRPEeq-EIrEIiSs5Q" base_Property="_qZAe0GRPEeq-EIrEIiSs5Q" name="LATITUD" description="Latitud expressada en graus decimals. Sistema de referència WGS84" fieldName="latitud"/>
+  <chatbot:PropertyConfig xmi:id="_qZEJMGRPEeq-EIrEIiSs5Q" base_Property="_qZDiIGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZEwQGRPEeq-EIrEIiSs5Q" outputName="LONGITUD" base_NamedElement="_qZDiIGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZHMgGRPEeq-EIrEIiSs5Q" base_Property="_qZDiIGRPEeq-EIrEIiSs5Q" name="LONGITUD" description="Longitud expressada en graus decimals. Sistema de referència WGS84" fieldName="longitud"/>
+  <chatbot:PropertyConfig xmi:id="_qZHzkGRPEeq-EIrEIiSs5Q" base_Property="_qZHMgWRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZIaoGRPEeq-EIrEIiSs5Q" outputName="ALTITUD" base_NamedElement="_qZHMgWRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZJowGRPEeq-EIrEIiSs5Q" base_Property="_qZHMgWRPEeq-EIrEIiSs5Q" name="ALTITUD" description="Valor numèric de altitud de l’estació" fieldName="altitud"/>
+  <chatbot:PropertyConfig xmi:id="_qZK24GRPEeq-EIrEIiSs5Q" base_Property="_qZKP0GRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZLd8GRPEeq-EIrEIiSs5Q" outputName="TIPUS ESTACIÓ" base_NamedElement="_qZKP0GRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZMsEGRPEeq-EIrEIiSs5Q" base_Property="_qZKP0GRPEeq-EIrEIiSs5Q" name="TIPUS ESTACIÓ" description="Valors possibles: Fons, Industrial o Trànsit" fieldName="tipus_est"/>
+  <chatbot:PropertyConfig xmi:id="_qZN6MGRPEeq-EIrEIiSs5Q" base_Property="_qZNTIGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZOhQGRPEeq-EIrEIiSs5Q" outputName="ÀREA URBANA" base_NamedElement="_qZNTIGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZPIUGRPEeq-EIrEIiSs5Q" base_Property="_qZNTIGRPEeq-EIrEIiSs5Q" name="ÀREA URBANA" description="Valors possibles: Rural, Suburbana o Urbana" fieldName="rea_urb"/>
+  <chatbot:PropertyConfig xmi:id="_qZQWcGRPEeq-EIrEIiSs5Q" toExpose="true" toFilterWith="true" base_Property="_qZPvYGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZQ9gGRPEeq-EIrEIiSs5Q" outputName="Magnitude" base_NamedElement="_qZPvYGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZSLoGRPEeq-EIrEIiSs5Q" base_Property="_qZPvYGRPEeq-EIrEIiSs5Q" name="MAGNITUD" description="Codi numèric que identifica el contaminant" fieldName="magnitud"/>
+  <chatbot:PropertyConfig xmi:id="_qZSysGRPEeq-EIrEIiSs5Q" toExpose="true" toFilterWith="true" base_Property="_qZSLoWRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZTZwGRPEeq-EIrEIiSs5Q" outputName="Pollutant" base_NamedElement="_qZSLoWRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZUn4GRPEeq-EIrEIiSs5Q" base_Property="_qZSLoWRPEeq-EIrEIiSs5Q" name="CONTAMINANT" description="Fórmula o mnemotècnic del contaminant" fieldName="contaminant"/>
+  <chatbot:PropertyConfig xmi:id="_qZVO8GRPEeq-EIrEIiSs5Q" base_Property="_qZUn4WRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZWdEGRPEeq-EIrEIiSs5Q" outputName="Units" base_NamedElement="_qZUn4WRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZYSQGRPEeq-EIrEIiSs5Q" base_Property="_qZUn4WRPEeq-EIrEIiSs5Q" name="UNITATS" description="Unitats de mesura del contaminant" fieldName="unitats"/>
+  <chatbot:PropertyConfig xmi:id="_qZaHcGRPEeq-EIrEIiSs5Q" base_Property="_qZY5UGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZbVkGRPEeq-EIrEIiSs5Q" outputName="PUNT MOSTREIG" base_NamedElement="_qZY5UGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZeY4GRPEeq-EIrEIiSs5Q" base_Property="_qZY5UGRPEeq-EIrEIiSs5Q" name="PUNT MOSTREIG" description="Identificador del punt de mostreig, inclou informació de la cabina i el contaminant" fieldName="punt_most"/>
+  <chatbot:PropertyConfig xmi:id="_qZe_8GRPEeq-EIrEIiSs5Q" toExpose="true" toFilterWith="true" base_Property="_qZeY4WRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZgOEGRPEeq-EIrEIiSs5Q" outputName="Year" base_NamedElement="_qZeY4WRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZhcMGRPEeq-EIrEIiSs5Q" base_Property="_qZeY4WRPEeq-EIrEIiSs5Q" name="ANY" description="Any en format YYYY que correspon a la dada mesurada" fieldName="any"/>
+  <chatbot:PropertyConfig xmi:id="_qZiqUGRPEeq-EIrEIiSs5Q" toExpose="true" toFilterWith="true" base_Property="_qZiDQGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZj4cGRPEeq-EIrEIiSs5Q" outputName="month" base_NamedElement="_qZiDQGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZlGkGRPEeq-EIrEIiSs5Q" base_Property="_qZiDQGRPEeq-EIrEIiSs5Q" name="MES" description="Mes en format MM que correspon a la dada mesurada" fieldName="mes"/>
+  <chatbot:PropertyConfig xmi:id="_qZmUsGRPEeq-EIrEIiSs5Q" toExpose="true" toFilterWith="true" base_Property="_qZltoGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qZqmIGRPEeq-EIrEIiSs5Q" outputName="day" base_NamedElement="_qZltoGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qZsbUGRPEeq-EIrEIiSs5Q" base_Property="_qZltoGRPEeq-EIrEIiSs5Q" name="DIA" description="Dia en format DD que correspon a la dada mesurada" fieldName="dia"/>
+  <chatbot:PropertyConfig xmi:id="_qZtpcGRPEeq-EIrEIiSs5Q" toExpose="true" toFilterWith="true" base_Property="_qZtCYGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbAp8GRPEeq-EIrEIiSs5Q" outputName="Date" base_NamedElement="_qZtCYGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataFieldType xmi:id="_qbCfIGRPEeq-EIrEIiSs5Q" base_Type="_qbB4EGRPEeq-EIrEIiSs5Q" type="Date"/>
+  <oda:SocrataField xmi:id="_qbDGMGRPEeq-EIrEIiSs5Q" base_Property="_qZtCYGRPEeq-EIrEIiSs5Q" name="DATA" description="Data de la mesura" fieldName="data"/>
+  <chatbot:PropertyConfig xmi:id="_qbGJgGRPEeq-EIrEIiSs5Q" base_Property="_qbDtQGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbGwkGRPEeq-EIrEIiSs5Q" outputName="H01" base_NamedElement="_qbDtQGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbH-sGRPEeq-EIrEIiSs5Q" base_Property="_qbDtQGRPEeq-EIrEIiSs5Q" name="H01" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 01" fieldName="h01"/>
+  <chatbot:PropertyConfig xmi:id="_qbIlwWRPEeq-EIrEIiSs5Q" base_Property="_qbIlwGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbJM0GRPEeq-EIrEIiSs5Q" outputName="V01" base_NamedElement="_qbIlwGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbKa8GRPEeq-EIrEIiSs5Q" base_Property="_qbIlwGRPEeq-EIrEIiSs5Q" name="V01" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 01" fieldName="v01"/>
+  <chatbot:PropertyConfig xmi:id="_qbLpEGRPEeq-EIrEIiSs5Q" base_Property="_qbLCAGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbM3MGRPEeq-EIrEIiSs5Q" outputName="2 a.m." base_NamedElement="_qbLCAGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbOFUGRPEeq-EIrEIiSs5Q" base_Property="_qbLCAGRPEeq-EIrEIiSs5Q" name="H02" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 02" fieldName="h02"/>
+  <chatbot:PropertyConfig xmi:id="_qbOsYGRPEeq-EIrEIiSs5Q" base_Property="_qbOFUWRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbP6gGRPEeq-EIrEIiSs5Q" outputName="V02" base_NamedElement="_qbOFUWRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbRIoGRPEeq-EIrEIiSs5Q" base_Property="_qbOFUWRPEeq-EIrEIiSs5Q" name="V02" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 02" fieldName="v02"/>
+  <chatbot:PropertyConfig xmi:id="_qbSWwGRPEeq-EIrEIiSs5Q" base_Property="_qbRvsGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbS90GRPEeq-EIrEIiSs5Q" outputName="H03" base_NamedElement="_qbRvsGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbUL8GRPEeq-EIrEIiSs5Q" base_Property="_qbRvsGRPEeq-EIrEIiSs5Q" name="H03" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 03" fieldName="h03"/>
+  <chatbot:PropertyConfig xmi:id="_qbVaEGRPEeq-EIrEIiSs5Q" base_Property="_qbUzAGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbWBIGRPEeq-EIrEIiSs5Q" outputName="V03" base_NamedElement="_qbUzAGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbXPQGRPEeq-EIrEIiSs5Q" base_Property="_qbUzAGRPEeq-EIrEIiSs5Q" name="V03" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 03" fieldName="v03"/>
+  <chatbot:PropertyConfig xmi:id="_qbYdYGRPEeq-EIrEIiSs5Q" base_Property="_qbX2UGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbZEcGRPEeq-EIrEIiSs5Q" outputName="H04" base_NamedElement="_qbX2UGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qba5oGRPEeq-EIrEIiSs5Q" base_Property="_qbX2UGRPEeq-EIrEIiSs5Q" name="H04" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 04" fieldName="h04"/>
+  <chatbot:PropertyConfig xmi:id="_qbcHwGRPEeq-EIrEIiSs5Q" base_Property="_qbbgsGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbcu0GRPEeq-EIrEIiSs5Q" outputName="V04" base_NamedElement="_qbbgsGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbd88GRPEeq-EIrEIiSs5Q" base_Property="_qbbgsGRPEeq-EIrEIiSs5Q" name="V04" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 04" fieldName="v04"/>
+  <chatbot:PropertyConfig xmi:id="_qbfyIGRPEeq-EIrEIiSs5Q" base_Property="_qbfLEGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbhnUGRPEeq-EIrEIiSs5Q" outputName="H05" base_NamedElement="_qbfLEGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbi1cGRPEeq-EIrEIiSs5Q" base_Property="_qbfLEGRPEeq-EIrEIiSs5Q" name="H05" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 05" fieldName="h05"/>
+  <chatbot:PropertyConfig xmi:id="_qbjcgGRPEeq-EIrEIiSs5Q" base_Property="_qbi1cWRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbkDkGRPEeq-EIrEIiSs5Q" outputName="V05" base_NamedElement="_qbi1cWRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qblRsGRPEeq-EIrEIiSs5Q" base_Property="_qbi1cWRPEeq-EIrEIiSs5Q" name="V05" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 05" fieldName="v05"/>
+  <chatbot:PropertyConfig xmi:id="_qbmf0GRPEeq-EIrEIiSs5Q" base_Property="_qbl4wGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbnG4GRPEeq-EIrEIiSs5Q" outputName="H06" base_NamedElement="_qbl4wGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbo8EGRPEeq-EIrEIiSs5Q" base_Property="_qbl4wGRPEeq-EIrEIiSs5Q" name="H06" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 06" fieldName="h06"/>
+  <chatbot:PropertyConfig xmi:id="_qbpjIWRPEeq-EIrEIiSs5Q" base_Property="_qbpjIGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qbqxQGRPEeq-EIrEIiSs5Q" outputName="V06" base_NamedElement="_qbpjIGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qbrYUGRPEeq-EIrEIiSs5Q" base_Property="_qbpjIGRPEeq-EIrEIiSs5Q" name="V06" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 06" fieldName="v06"/>
+  <chatbot:PropertyConfig xmi:id="_qb4zsGRPEeq-EIrEIiSs5Q" base_Property="_qb4MoGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qb6B0GRPEeq-EIrEIiSs5Q" outputName="H07" base_NamedElement="_qb4MoGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qb7P8GRPEeq-EIrEIiSs5Q" base_Property="_qb4MoGRPEeq-EIrEIiSs5Q" name="H07" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 07" fieldName="h07"/>
+  <chatbot:PropertyConfig xmi:id="_qb9FIGRPEeq-EIrEIiSs5Q" base_Property="_qb73AGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qb-TQGRPEeq-EIrEIiSs5Q" outputName="V07" base_NamedElement="_qb73AGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qb-6UGRPEeq-EIrEIiSs5Q" base_Property="_qb73AGRPEeq-EIrEIiSs5Q" name="V07" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 07" fieldName="v07"/>
+  <chatbot:PropertyConfig xmi:id="_qcAIcGRPEeq-EIrEIiSs5Q" base_Property="_qb_hYGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcDLwGRPEeq-EIrEIiSs5Q" outputName="H08" base_NamedElement="_qb_hYGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcEZ4GRPEeq-EIrEIiSs5Q" base_Property="_qb_hYGRPEeq-EIrEIiSs5Q" name="H08" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 08" fieldName="h08"/>
+  <chatbot:PropertyConfig xmi:id="_qcFA8GRPEeq-EIrEIiSs5Q" base_Property="_qcEZ4WRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcFoAGRPEeq-EIrEIiSs5Q" outputName="V08" base_NamedElement="_qcEZ4WRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcG2IGRPEeq-EIrEIiSs5Q" base_Property="_qcEZ4WRPEeq-EIrEIiSs5Q" name="V08" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 08" fieldName="v08"/>
+  <chatbot:PropertyConfig xmi:id="_qcIEQGRPEeq-EIrEIiSs5Q" base_Property="_qcHdMGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcIrUGRPEeq-EIrEIiSs5Q" outputName="H09" base_NamedElement="_qcHdMGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcJ5cGRPEeq-EIrEIiSs5Q" base_Property="_qcHdMGRPEeq-EIrEIiSs5Q" name="H09" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 09" fieldName="h09"/>
+  <chatbot:PropertyConfig xmi:id="_qcKggWRPEeq-EIrEIiSs5Q" base_Property="_qcKggGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcLuoGRPEeq-EIrEIiSs5Q" outputName="V09" base_NamedElement="_qcKggGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcM8wGRPEeq-EIrEIiSs5Q" base_Property="_qcKggGRPEeq-EIrEIiSs5Q" name="V09" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 09" fieldName="v09"/>
+  <chatbot:PropertyConfig xmi:id="_qcNj0GRPEeq-EIrEIiSs5Q" base_Property="_qcM8wWRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcPZAGRPEeq-EIrEIiSs5Q" outputName="H10" base_NamedElement="_qcM8wWRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcROMGRPEeq-EIrEIiSs5Q" base_Property="_qcM8wWRPEeq-EIrEIiSs5Q" name="H10" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 10" fieldName="h10"/>
+  <chatbot:PropertyConfig xmi:id="_qcScUGRPEeq-EIrEIiSs5Q" base_Property="_qcR1QGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcTDYGRPEeq-EIrEIiSs5Q" outputName="V10" base_NamedElement="_qcR1QGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcURgGRPEeq-EIrEIiSs5Q" base_Property="_qcR1QGRPEeq-EIrEIiSs5Q" name="V10" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 10" fieldName="v10"/>
+  <chatbot:PropertyConfig xmi:id="_qcWGsGRPEeq-EIrEIiSs5Q" base_Property="_qcU4kGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcWtwGRPEeq-EIrEIiSs5Q" outputName="H11" base_NamedElement="_qcU4kGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcX74GRPEeq-EIrEIiSs5Q" base_Property="_qcU4kGRPEeq-EIrEIiSs5Q" name="H11" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 11" fieldName="h11"/>
+  <chatbot:PropertyConfig xmi:id="_qcZKAGRPEeq-EIrEIiSs5Q" base_Property="_qcYi8GRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcZxEGRPEeq-EIrEIiSs5Q" outputName="V11" base_NamedElement="_qcYi8GRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qca_MGRPEeq-EIrEIiSs5Q" base_Property="_qcYi8GRPEeq-EIrEIiSs5Q" name="V11" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 11" fieldName="v11"/>
+  <chatbot:PropertyConfig xmi:id="_qccNUGRPEeq-EIrEIiSs5Q" base_Property="_qcbmQGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcdbcGRPEeq-EIrEIiSs5Q" outputName="H12" base_NamedElement="_qcbmQGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcepkGRPEeq-EIrEIiSs5Q" base_Property="_qcbmQGRPEeq-EIrEIiSs5Q" name="H12" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 12" fieldName="h12"/>
+  <chatbot:PropertyConfig xmi:id="_qcf3sGRPEeq-EIrEIiSs5Q" base_Property="_qcfQoGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qchs4GRPEeq-EIrEIiSs5Q" outputName="V12" base_NamedElement="_qcfQoGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qci7AGRPEeq-EIrEIiSs5Q" base_Property="_qcfQoGRPEeq-EIrEIiSs5Q" name="V12" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 12" fieldName="v12"/>
+  <chatbot:PropertyConfig xmi:id="_qcjiEWRPEeq-EIrEIiSs5Q" base_Property="_qcjiEGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qckwMGRPEeq-EIrEIiSs5Q" outputName="H13" base_NamedElement="_qcjiEGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qclXQGRPEeq-EIrEIiSs5Q" base_Property="_qcjiEGRPEeq-EIrEIiSs5Q" name="H13" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 13" fieldName="h13"/>
+  <chatbot:PropertyConfig xmi:id="_qcmlYGRPEeq-EIrEIiSs5Q" base_Property="_qcl-UGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcnMcGRPEeq-EIrEIiSs5Q" outputName="V13" base_NamedElement="_qcl-UGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcoakGRPEeq-EIrEIiSs5Q" base_Property="_qcl-UGRPEeq-EIrEIiSs5Q" name="V13" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 13" fieldName="v13"/>
+  <chatbot:PropertyConfig xmi:id="_qcposGRPEeq-EIrEIiSs5Q" base_Property="_qcpBoGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcqPwGRPEeq-EIrEIiSs5Q" outputName="H14" base_NamedElement="_qcpBoGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcrd4GRPEeq-EIrEIiSs5Q" base_Property="_qcpBoGRPEeq-EIrEIiSs5Q" name="H14" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 14" fieldName="h14"/>
+  <chatbot:PropertyConfig xmi:id="_qct6IGRPEeq-EIrEIiSs5Q" base_Property="_qcsE8GRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qcvIQGRPEeq-EIrEIiSs5Q" outputName="V14" base_NamedElement="_qcsE8GRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qcwWYGRPEeq-EIrEIiSs5Q" base_Property="_qcsE8GRPEeq-EIrEIiSs5Q" name="V14" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 14" fieldName="v14"/>
+  <chatbot:PropertyConfig xmi:id="_qcxkgGRPEeq-EIrEIiSs5Q" base_Property="_qcw9cGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qczZsGRPEeq-EIrEIiSs5Q" outputName="H15" base_NamedElement="_qcw9cGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qc0n0GRPEeq-EIrEIiSs5Q" base_Property="_qcw9cGRPEeq-EIrEIiSs5Q" name="H15" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 15" fieldName="h15"/>
+  <chatbot:PropertyConfig xmi:id="_qc118GRPEeq-EIrEIiSs5Q" base_Property="_qc1O4GRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qc2dAGRPEeq-EIrEIiSs5Q" outputName="V15" base_NamedElement="_qc1O4GRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qc4SMGRPEeq-EIrEIiSs5Q" base_Property="_qc1O4GRPEeq-EIrEIiSs5Q" name="V15" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 15" fieldName="v15"/>
+  <chatbot:PropertyConfig xmi:id="_qc6ucGRPEeq-EIrEIiSs5Q" base_Property="_qc6HYGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qc78kGRPEeq-EIrEIiSs5Q" outputName="H16" base_NamedElement="_qc6HYGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qc9xwGRPEeq-EIrEIiSs5Q" base_Property="_qc6HYGRPEeq-EIrEIiSs5Q" name="H16" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 16" fieldName="h16"/>
+  <chatbot:PropertyConfig xmi:id="_qdIw4GRPEeq-EIrEIiSs5Q" base_Property="_qdD4YGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdJ_AGRPEeq-EIrEIiSs5Q" outputName="V16" base_NamedElement="_qdD4YGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdLNIGRPEeq-EIrEIiSs5Q" base_Property="_qdD4YGRPEeq-EIrEIiSs5Q" name="V16" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 16" fieldName="v16"/>
+  <chatbot:PropertyConfig xmi:id="_qdMbQGRPEeq-EIrEIiSs5Q" base_Property="_qdL0MGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdNCUGRPEeq-EIrEIiSs5Q" outputName="H17" base_NamedElement="_qdL0MGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdOQcGRPEeq-EIrEIiSs5Q" base_Property="_qdL0MGRPEeq-EIrEIiSs5Q" name="H17" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 17" fieldName="h17"/>
+  <chatbot:PropertyConfig xmi:id="_qdPekGRPEeq-EIrEIiSs5Q" base_Property="_qdO3gGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdQFoGRPEeq-EIrEIiSs5Q" outputName="V17" base_NamedElement="_qdO3gGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdRTwGRPEeq-EIrEIiSs5Q" base_Property="_qdO3gGRPEeq-EIrEIiSs5Q" name="V17" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 17" fieldName="v17"/>
+  <chatbot:PropertyConfig xmi:id="_qdTwAGRPEeq-EIrEIiSs5Q" base_Property="_qdTI8GRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdUXEGRPEeq-EIrEIiSs5Q" outputName="H18" base_NamedElement="_qdTI8GRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdVlMGRPEeq-EIrEIiSs5Q" base_Property="_qdTI8GRPEeq-EIrEIiSs5Q" name="H18" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 18" fieldName="h18"/>
+  <chatbot:PropertyConfig xmi:id="_qdWzUGRPEeq-EIrEIiSs5Q" base_Property="_qdWMQGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdXaYGRPEeq-EIrEIiSs5Q" outputName="V18" base_NamedElement="_qdWMQGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdZPkGRPEeq-EIrEIiSs5Q" base_Property="_qdWMQGRPEeq-EIrEIiSs5Q" name="V18" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 18" fieldName="v18"/>
+  <chatbot:PropertyConfig xmi:id="_qdadsGRPEeq-EIrEIiSs5Q" base_Property="_qdZ2oGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdbr0GRPEeq-EIrEIiSs5Q" outputName="H19" base_NamedElement="_qdZ2oGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qddhAGRPEeq-EIrEIiSs5Q" base_Property="_qdZ2oGRPEeq-EIrEIiSs5Q" name="H19" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 19" fieldName="h19"/>
+  <chatbot:PropertyConfig xmi:id="_qdevIGRPEeq-EIrEIiSs5Q" base_Property="_qdeIEGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdfWMGRPEeq-EIrEIiSs5Q" outputName="V19" base_NamedElement="_qdeIEGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdgkUGRPEeq-EIrEIiSs5Q" base_Property="_qdeIEGRPEeq-EIrEIiSs5Q" name="V19" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 19" fieldName="v19"/>
+  <chatbot:PropertyConfig xmi:id="_qdhycGRPEeq-EIrEIiSs5Q" base_Property="_qdhLYGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdiZgGRPEeq-EIrEIiSs5Q" outputName="H20" base_NamedElement="_qdhLYGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdjAkGRPEeq-EIrEIiSs5Q" base_Property="_qdhLYGRPEeq-EIrEIiSs5Q" name="H20" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 20" fieldName="h20"/>
+  <chatbot:PropertyConfig xmi:id="_qdkOsGRPEeq-EIrEIiSs5Q" base_Property="_qdjnoGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdk1wGRPEeq-EIrEIiSs5Q" outputName="V20" base_NamedElement="_qdjnoGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdmD4GRPEeq-EIrEIiSs5Q" base_Property="_qdjnoGRPEeq-EIrEIiSs5Q" name="V20" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 20" fieldName="v20"/>
+  <chatbot:PropertyConfig xmi:id="_qdnSAGRPEeq-EIrEIiSs5Q" base_Property="_qdmq8GRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdn5EGRPEeq-EIrEIiSs5Q" outputName="H21" base_NamedElement="_qdmq8GRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdpHMGRPEeq-EIrEIiSs5Q" base_Property="_qdmq8GRPEeq-EIrEIiSs5Q" name="H21" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 21" fieldName="h21"/>
+  <chatbot:PropertyConfig xmi:id="_qdrjcGRPEeq-EIrEIiSs5Q" base_Property="_qdq8YGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdsKgGRPEeq-EIrEIiSs5Q" outputName="V21" base_NamedElement="_qdq8YGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdt_sGRPEeq-EIrEIiSs5Q" base_Property="_qdq8YGRPEeq-EIrEIiSs5Q" name="V21" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 21" fieldName="v21"/>
+  <chatbot:PropertyConfig xmi:id="_qdvN0GRPEeq-EIrEIiSs5Q" base_Property="_qdumwGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qdxqEGRPEeq-EIrEIiSs5Q" outputName="H22" base_NamedElement="_qdumwGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qdy4MGRPEeq-EIrEIiSs5Q" base_Property="_qdumwGRPEeq-EIrEIiSs5Q" name="H22" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 22" fieldName="h22"/>
+  <chatbot:PropertyConfig xmi:id="_qdzfQGRPEeq-EIrEIiSs5Q" base_Property="_qdy4MWRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qd0GUGRPEeq-EIrEIiSs5Q" outputName="V22" base_NamedElement="_qdy4MWRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qd0tYGRPEeq-EIrEIiSs5Q" base_Property="_qdy4MWRPEeq-EIrEIiSs5Q" name="V22" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 22" fieldName="v22"/>
+  <chatbot:PropertyConfig xmi:id="_qd1UcWRPEeq-EIrEIiSs5Q" base_Property="_qd1UcGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qd17gGRPEeq-EIrEIiSs5Q" outputName="H23" base_NamedElement="_qd1UcGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qd4-0GRPEeq-EIrEIiSs5Q" base_Property="_qd1UcGRPEeq-EIrEIiSs5Q" name="H23" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 23" fieldName="h23"/>
+  <chatbot:PropertyConfig xmi:id="_qd5l4GRPEeq-EIrEIiSs5Q" base_Property="_qd4-0WRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qd6M8GRPEeq-EIrEIiSs5Q" outputName="V23" base_NamedElement="_qd4-0WRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qd7bEGRPEeq-EIrEIiSs5Q" base_Property="_qd4-0WRPEeq-EIrEIiSs5Q" name="V23" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 23" fieldName="v23"/>
+  <chatbot:PropertyConfig xmi:id="_qd8CIWRPEeq-EIrEIiSs5Q" base_Property="_qd8CIGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qd8pMGRPEeq-EIrEIiSs5Q" outputName="H24" base_NamedElement="_qd8CIGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qd93UGRPEeq-EIrEIiSs5Q" base_Property="_qd8CIGRPEeq-EIrEIiSs5Q" name="H24" description="Columna amb el valor mesurat per al contaminant de l’estació per a l’hora 24" fieldName="h24"/>
+  <chatbot:PropertyConfig xmi:id="_qd-eYWRPEeq-EIrEIiSs5Q" base_Property="_qd-eYGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qd_FcGRPEeq-EIrEIiSs5Q" outputName="V24" base_NamedElement="_qd-eYGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qeATkGRPEeq-EIrEIiSs5Q" base_Property="_qd-eYGRPEeq-EIrEIiSs5Q" name="V24" description="Columna amb el flag de validació (V vàlid / N No vàlid) per al contaminant de l’estació per a l’hora 24" fieldName="v24"/>
+  <oda:SocrataFieldType xmi:id="_qeCIwGRPEeq-EIrEIiSs5Q" base_Type="_qeA6oGRPEeq-EIrEIiSs5Q" type="Location"/>
+  <oda:SocrataField xmi:id="_qeCv0GRPEeq-EIrEIiSs5Q" base_Property="_qeBhtmRPEeq-EIrEIiSs5Q" name="Georeferència" description="Columna de georeferència" fieldName="geocoded_column"/>
+  <chatbot:PropertyConfig xmi:id="_qeDW4GRPEeq-EIrEIiSs5Q" toExpose="true" toFilterWith="true" base_Property="_qeBhtmRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qeD98GRPEeq-EIrEIiSs5Q" outputName="Georeferència" base_NamedElement="_qeBhtmRPEeq-EIrEIiSs5Q"/>
+  <chatbot:PropertyConfig xmi:id="_qeElAGRPEeq-EIrEIiSs5Q" base_Property="_qeD98WRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qeFMEGRPEeq-EIrEIiSs5Q" outputName="Columna amb nova georeferència (address)" base_NamedElement="_qeD98WRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qeGaMGRPEeq-EIrEIiSs5Q" base_Property="_qeD98WRPEeq-EIrEIiSs5Q" name="Columna amb nova georeferència (address)" fieldName="geocoded_column_address"/>
+  <chatbot:PropertyConfig xmi:id="_qeHBQGRPEeq-EIrEIiSs5Q" base_Property="_qeGaMWRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qeHoUGRPEeq-EIrEIiSs5Q" outputName="Columna amb nova georeferència (city)" base_NamedElement="_qeGaMWRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qeI2cGRPEeq-EIrEIiSs5Q" base_Property="_qeGaMWRPEeq-EIrEIiSs5Q" name="Columna amb nova georeferència (city)" fieldName="geocoded_column_city"/>
+  <chatbot:PropertyConfig xmi:id="_qeJdgWRPEeq-EIrEIiSs5Q" base_Property="_qeJdgGRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qeVDsGRPEeq-EIrEIiSs5Q" outputName="Columna amb nova georeferència (state)" base_NamedElement="_qeJdgGRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qeW44GRPEeq-EIrEIiSs5Q" base_Property="_qeJdgGRPEeq-EIrEIiSs5Q" name="Columna amb nova georeferència (state)" fieldName="geocoded_column_state"/>
+  <chatbot:PropertyConfig xmi:id="_qeXf8GRPEeq-EIrEIiSs5Q" base_Property="_qeW44WRPEeq-EIrEIiSs5Q"/>
+  <chatbot:BotVocabulary xmi:id="_qeYuEGRPEeq-EIrEIiSs5Q" outputName="Columna amb nova georeferència (zip)" base_NamedElement="_qeW44WRPEeq-EIrEIiSs5Q"/>
+  <oda:SocrataField xmi:id="_qebKUGRPEeq-EIrEIiSs5Q" base_Property="_qeW44WRPEeq-EIrEIiSs5Q" name="Columna amb nova georeferència (zip)" fieldName="geocoded_column_zip"/>
+</xmi:XMI>

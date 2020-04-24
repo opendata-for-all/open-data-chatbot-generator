@@ -1,0 +1,19 @@
+<project>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>plugins</artifactId>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>edu.uoc.som.oda.bot.generator</groupId>
+		<artifactId>edu.uoc.som.oda.bot.generator.root</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>edu.uoc.som.oda.bot.profile</module>
+		<module>edu.uoc.som.oda.bot.generator.core</module>
+		<module>edu.uoc.som.oda.bot.generator.ui</module>
+		
+	</modules>
+</project>

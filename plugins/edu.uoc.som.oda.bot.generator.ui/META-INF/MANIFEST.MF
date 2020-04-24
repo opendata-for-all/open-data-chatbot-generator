@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ODA Bot Generator UI
+Bundle-SymbolicName: edu.uoc.som.oda.bot.generator.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.uoc.som.oda.bot.generator.ui.ODABotGeneratorUIPlugin
+Bundle-Vendor: SOM Research Lab
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.uml2.uml,
+ org.eclipse.uml2.uml.resources,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.ecore,
+ org.eclipse.ui,
+ edu.uoc.som.oda.bot.generator,
+ org.eclipse.ui.ide,
+ edu.uoc.som.oda.bot.importer;bundle-version="1.0.0",
+ com.google.gson;bundle-version="2.8.2"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .

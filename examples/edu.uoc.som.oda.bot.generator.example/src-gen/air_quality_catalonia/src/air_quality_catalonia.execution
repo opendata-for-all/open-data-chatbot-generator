@@ -1,0 +1,678 @@
+import library "air_quality_catalonia/src/Air_quality_cataloniaLibrary.intent" as Air_quality_cataloniaLib 
+import library "CoreLibrary"
+import platform "ReactPlatform"
+import platform "RestPlatform"
+
+use provider ReactPlatform.ReactIntentProvider
+use provider ReactPlatform.ReactEventProvider
+
+on intent Client_Ready  do 
+	ReactPlatform.Reply("Hi there")
+	ReactPlatform.Reply("I can show you information about *air quality data in catalonia*")
+	
+on intent Default_Fallback_Intent  do 
+	ReactPlatform.Reply("This is awkward. I could not treat your request")
+	ReactPlatform.Reply("Would you please try again")
+	
+on intent SearchAirQualityDataIntent  do 
+	session.put("airQualityDataFilters",<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>> newArrayList)
+	session.put("airQualityDataParameterMapping", #{"Pollutant"-> "contaminant","Municipality"-> "municipi","Year"-> "any","month"-> "mes","Magnitude"-> "magnitud","day"-> "dia","Station name"-> "nom_estaci","Date"-> "data"})
+	val airQualityDataFilterOptions = newArrayList
+	airQualityDataFilterOptions.addAll(#["Municipality","Magnitude","Pollutant","Year","month","day","Date"])
+	session.put("airQualityDataFilterOptions",airQualityDataFilterOptions)
+	
+	val airQualityDataFieldOptions = newArrayList
+	airQualityDataFieldOptions.addAll(#["Station name","Municipality","Magnitude","Pollutant","Year","month","day","Date"])	
+	session.put("airQualityDataFieldOptions",airQualityDataFieldOptions)
+	
+	session.put("airQualityDataFieldValues",<String>newArrayList)
+	
+	ReactPlatform.Reply("Do you want to filter the list of Air quality data in Catalonia?",#["I don't want to add filters", "add filters"])
+	
+on intent OrderByAirQualityDataIntent  do 
+	//We retrieve the ordering information
+	val orderBy = context.get("AirQualityDataOrder").get("orderField") as java.util.Map<String,String>
+	val order = context.get("AirQualityDataOrder").get("orderValue")
+	
+	ReactPlatform.Reply("orderBy "+orderBy)
+	ReactPlatform.Reply("order "+order)
+	
+	//We retrieve the filters and select fields from the session
+	val airQualityDataFilters = session.get("airQualityDataFilters") as java.util.List<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>>
+	val airQualityDataFieldValues = session.get("airQualityDataFieldValues") as java.util.List<String>
+	
+	//We retrieve the parameter map which will help us to get fields real name to create the request
+	val parameterMapping = session.get("airQualityDataParameterMapping") as java.util.Map<String,String>
+	
+	//We create a list for each data type kind. This will help us to format the request
+	val stringParameters = #["Municipality","Pollutant"]
+	val numericParameters = #["Magnitude","Year","month","day"]
+	val dateParameters = #["Date"]
+	
+	//We init the query parameters
+	val queryParameters = <String,Object> newHashMap
+	val countParameters = <String,Object> newHashMap
+	
+	//We init the paging information
+	val limit = 10
+	val page = 1L
+	val offset = 0L
+	
+	//We store the paging information in the session
+	session.put("page", page)
+	
+	
+	
+	countParameters.put("$select","count(*)")
+	
+	
+	queryParameters.put("$limit",limit)
+	queryParameters.put("$offset",offset)
+	
+	val field = new StringBuffer
+	if(!orderBy.get("TextualSelectFieldEntity").nullOrEmpty){
+		field.append(orderBy.get("TextualSelectFieldEntity"))
+		}
+	if(!orderBy.get("NumericSelectFieldEntity").nullOrEmpty){
+		field.append(orderBy.get("NumericSelectFieldEntity"))
+		}
+	if(!orderBy.get("DateSelectFieldEntity").nullOrEmpty){
+		field.append(orderBy.get("DateSelectFieldEntity"))
+		}
+	val fieldValue = field.toString
+	
+	val orderValue = new StringBuffer
+	
+	if(!fieldValue.nullOrEmpty){
+		session.put("orderByAirQualityData",fieldValue)
+		orderValue.append(parameterMapping.get(fieldValue))
+		if(order !== null){
+			session.put("orderAirQualityData",order)
+			orderValue.append(" "+order)
+			}
+		}
+	
+	if(!orderValue.toString.nullOrEmpty){
+		queryParameters.put("$order",orderValue.toString)
+		}
+	
+	if(!airQualityDataFilters.isEmpty){
+		val query = airQualityDataFilters.map[e | 
+			if(stringParameters.contains(e.left)) {
+				if(e.middle == "=") {
+				parameterMapping.get(e.left)+" = "+"'"+e.right+"'"	
+				} else if (e.middle == "starts with") {
+					parameterMapping.get(e.left)+" like '"+e.right+"%'"	
+				} else if (e.middle == "ends with") {
+					parameterMapping.get(e.left)+" like '%"+e.right+"'"	
+				} else {
+					parameterMapping.get(e.left)+" like '%"+e.right+"%'"	
+				}
+			}
+			else if(numericParameters.contains(e.left)){
+					parameterMapping.get(e.left)+" "+e.middle+" "+e.right
+				}
+			else if(dateParameters.contains(e.left)){
+				if(e.middle == "=") {
+					parameterMapping.get(e.left)+" = "+"'"+(e.right as String).substring(0,10)+"'"}
+			}
+		].join(" AND ")[it.toString]
+	
+		queryParameters.put("$where",query)
+		countParameters.put("$where",query)
+	}
+	
+	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",countParameters,emptyMap,emptyMap) 
+	
+	if(countResponse.status === 200){
+		val countArray = countResponse.body.asJsonArray
+		val total = Long.valueOf(countArray.iterator.next.asJsonObject.get("count").asString) 
+		session.put("total",total) 
+		val pageCount = total / limit + 1
+		session.put("pageCound",pageCount)
+	
+		if(total > 0){
+	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
+	if(response.status === 200){
+		ReactPlatform.Reply("Showing "+limit+" records of a total of "+total)
+		ReactPlatform.Reply("Page "+page+"/"+pageCount+". Write _next_ to see the next page")
+		val list = response.body.asJsonArray
+		val header = "|"+airQualityDataFieldValues.join("|")+"|"+"\n"+ "|" +airQualityDataFieldValues.map[e | "---"].join("|") + "|\n"
+		val data = list.map[e | 
+		"|" + airQualityDataFieldValuesmap[r | if(dateParameters.contains(r)) {e.asJsonObject.get(parameterMapping.get(r)).getAsString.substring(0,10)}
+						else   {e.asJsonObject.get(parameterMapping.get(r))}].join(" | ") + "|"
+					].join("\n")
+		ReactPlatform.Reply(header + data)
+	}
+		}
+		else {
+			ReactPlatform.Reply("Nothing found.")	
+		}
+	
+	} else {
+		ReactPlatform.Reply("Oops, something went wrong. The API responded with status "+ countResponse.status)	
+	}
+	
+on intent AddPostOperationFilterAirQualityDataIntent  do 
+	val condition = context.get("AirQualityDataCondition").get("condition")
+	val stringValue = context.get("AirQualityDataCondition").get("stringValue")
+	
+	
+	//We retrieve the filters and select fields from the session
+	val airQualityDataFilters = session.get("airQualityDataFilters") as java.util.List<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>>
+	val airQualityDataFieldValues = session.get("airQualityDataFieldValues") as java.util.List<String>
+	
+	//We retrieve the parameter map which will help us to get fields real name to create the request
+	val parameterMapping = session.get("airQualityDataParameterMapping") as java.util.Map<String,String>
+	
+	//We create a list for each data type kind. This will help us to format the request
+	val stringParameters = #["Municipality","Pollutant"]
+	val numericParameters = #["Magnitude","Year","month","day"]
+	val dateParameters = #["Date"]
+	
+	//We init the query parameters
+	val queryParameters = <String,Object> newHashMap
+	val countParameters = <String,Object> newHashMap
+	
+	//We init the paging information
+	val limit = 10
+	val page = 1L
+	val offset = 0L
+	
+	//We store the paging information in the session
+	session.put("page", page)
+	
+	
+	val orderBy = session.get("orderByAirQualityData")
+	val order = session.get("orderAirQualityData")
+	
+	val orderValue = new StringBuffer
+	
+	if(orderBy !== null){
+		orderValue.append(parameterMapping.get(orderBy))
+		if(order !== null){
+			orderValue.append(" "+order)
+			}
+		}
+	if(!orderValue.toString.nullOrEmpty)
+	queryParameters.put("$order",orderValue.toString)
+	
+	
+	countParameters.put("$select","count(*)")
+	queryParameters.put("$limit",limit)
+	
+	
+	queryParameters.put("$offset",offset)
+	
+	if(condition !== null && condition instanceof java.util.Map) {
+		val conditionMap = condition as java.util.Map<String,String>
+		if(!conditionMap.get("TextualFilterEntity").nullOrEmpty && stringParameters.contains(conditionMap.get("TextualFilterEntity"))   && !conditionMap.get("TextualOperator").nullOrEmpty && stringValue !==null) {
+				val filter = new org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>(conditionMap.get("TextualFilterEntity"),conditionMap.get("TextualOperator"), stringValue)
+				airQualityDataFilters.add(filter)
+			}
+			else if(!conditionMap.get("NumericFilterEntity").nullOrEmpty && numericParameters.contains(conditionMap.get("NumericFilterEntity"))   && !conditionMap.get("NumericOperator").nullOrEmpty && !conditionMap.get("number").nullOrEmpty){
+					parameterMapping.get(conditionMap.get("NumericFilterEntity"))+" "+conditionMap.get("NumericOperator")+" "+conditionMap.get("number")
+					val filter = new org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>(conditionMap.get("NumericFilterEntity"),conditionMap.get("NumericOperator"), conditionMap.get("number"))
+					airQualityDataFilters.add(filter)
+				
+				}
+			else if(!conditionMap.get("DateFilterEntity").nullOrEmpty && dateParameters.contains(conditionMap.get("DateFilterEntity"))   && !conditionMap.get("DateOperator").nullOrEmpty && !conditionMap.get("date").nullOrEmpty){
+					parameterMapping.get(conditionMap.get("DateFilterEntity"))+" "+conditionMap.get("DateFilterEntity")+" "+conditionMap.get("date")
+					val filter = new org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>(conditionMap.get("DateFilterEntity"),conditionMap.get("DateFilterEntity"), conditionMap.get("date"))
+					airQualityDataFilters.add(filter)
+			}
+		}
+	
+	
+	if(!airQualityDataFilters.isEmpty){
+		val query = airQualityDataFilters.map[e | 
+			if(stringParameters.contains(e.left)) {
+				if(e.middle == "=") {
+				parameterMapping.get(e.left)+" = "+"'"+e.right+"'"	
+				} else if (e.middle == "starts with") {
+					parameterMapping.get(e.left)+" like '"+e.right+"%'"	
+				} else if (e.middle == "ends with") {
+					parameterMapping.get(e.left)+" like '%"+e.right+"'"	
+				} else {
+					parameterMapping.get(e.left)+" like '%"+e.right+"%'"	
+				}
+			}
+			else if(numericParameters.contains(e.left)){
+					parameterMapping.get(e.left)+" "+e.middle+" "+e.right
+				}
+			else if(dateParameters.contains(e.left)){
+				if(e.middle == "=") {
+					parameterMapping.get(e.left)+" = "+"'"+(e.right as String).substring(0,10)+"'"}
+			}
+		].join(" AND ")[it.toString]
+	
+		queryParameters.put("$where",query)
+		countParameters.put("$where",query)
+	}
+	
+	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",countParameters,emptyMap,emptyMap) 
+	
+	if(countResponse.status === 200){
+		val countArray = countResponse.body.asJsonArray
+		val total = Long.valueOf(countArray.iterator.next.asJsonObject.get("count").asString) 
+		session.put("total",total) 
+		val pageCount = total / limit + 1
+		session.put("pageCound",pageCount)
+	
+		if(total > 0){
+	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
+	if(response.status === 200){
+		ReactPlatform.Reply("Showing "+limit+" records of a total of "+total)
+		ReactPlatform.Reply("Page "+page+"/"+pageCount+". Write _next_ to see the next page")
+		val list = response.body.asJsonArray
+		val header = "|"+airQualityDataFieldValues.join("|")+"|"+"\n"+ "|" +airQualityDataFieldValues.map[e | "---"].join("|") + "|\n"
+		val data = list.map[e | 
+		"|" + airQualityDataFieldValuesmap[r | if(dateParameters.contains(r)) {e.asJsonObject.get(parameterMapping.get(r)).getAsString.substring(0,10)}
+						else   {e.asJsonObject.get(parameterMapping.get(r))}].join(" | ") + "|"
+					].join("\n")
+		ReactPlatform.Reply(header + data)
+	}
+		}
+		else {
+			ReactPlatform.Reply("Nothing found.")	
+		}
+	
+	} else {
+		ReactPlatform.Reply("Oops, something went wrong. The API responded with status "+ countResponse.status)	
+	}
+	
+on intent ChooseAirQualityDataSelectOptionsIntent  do 
+	val fieldOptionValue = context.get("AirQualityDataEntity").get("fieldAirQualityDataValue") as java.util.Map<String,String>
+	val airQualityDataFieldOptions = session.get("airQualityDataFieldOptions") as java.util.ArrayList<String>
+	val airQualityDataFieldValues  = session.get("airQualityDataFieldValues") as java.util.ArrayList<String>
+	
+	if(!fieldOptionValue.get("TextualSelectFieldEntity").nullOrEmpty){
+		val fieldValue = fieldOptionValue.get("TextualSelectFieldEntity")
+		airQualityDataFieldValues.add(fieldValue)
+		airQualityDataFieldOptions.remove(fieldValue)
+		}
+	if(!fieldOptionValue.get("NumericSelectFieldEntity").nullOrEmpty){
+		val fieldValue = fieldOptionValue.get("NumericSelectFieldEntity")
+		airQualityDataFieldValues.add(fieldValue)
+		airQualityDataFieldOptions.remove(fieldValue)
+		}
+	if(!fieldOptionValue.get("DateSelectFieldEntity").nullOrEmpty){
+		val fieldValue = fieldOptionValue.get("DateSelectFieldEntity")
+		airQualityDataFieldValues.add(fieldValue)
+		airQualityDataFieldOptions.remove(fieldValue)
+		}
+	
+		
+	ReactPlatform.Reply("All right")
+	ReactPlatform.Reply("Do you want to show more fields?",#["Just show me the list", "add fields"]) 
+	
+on intent SelectFieldAirQualityDataIntent  do 
+	ReactPlatform.Reply("Choose a field",session.get("airQualityDataFieldOptions") as java.util.List<String>)
+	
+	
+on intent SearchAllAirQualityDataIntent  do 
+	//Init everything
+	session.put("airQualityDataFilters",<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>> newArrayList)
+	val airQualityDataFilterOptions = newArrayList
+	airQualityDataFilterOptions.addAll(#["Municipality","Magnitude","Pollutant","Year","month","day","Date"])
+	session.put("airQualityDataFilterOptions",airQualityDataFilterOptions)
+	session.put("airQualityDataParameterMapping", #{"Pollutant"-> "contaminant","Municipality"-> "municipi","Year"-> "any","month"-> "mes","Magnitude"-> "magnitud","day"-> "dia","Station name"-> "nom_estaci","Date"-> "data"})
+	
+	val airQualityDataFieldOptions = newArrayList
+	airQualityDataFieldOptions.addAll(#["Station name","Municipality","Magnitude","Pollutant","Year","month","day","Date"])	
+	session.put("airQualityDataFieldOptions",airQualityDataFieldOptions)
+	
+	session.put("airQualityDataFieldValues",<String>newArrayList)
+	session.put("page", 1)
+	session.remove("orderByAirQualityData")
+	session.remove("orderAirQualityData")
+	
+	
+		
+	val condition = context.get("AirQualityDataCondition").get("condition") 
+	val stringValue = context.get("AirQualityDataCondition").get("stringValue")
+	
+	
+	//We retrieve the filters and select fields from the session
+	val airQualityDataFilters = session.get("airQualityDataFilters") as java.util.List<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>>
+	
+	//We retrieve the parameter map which will help us to get fields real name to create the request
+	val parameterMapping = session.get("airQualityDataParameterMapping") as java.util.Map<String,String>
+	
+	//We create a list for each data type kind. This will help us to format the request
+	val stringParameters = #["Municipality","Pollutant"]
+	val numericParameters = #["Magnitude","Year","month","day"]
+	val dateParameters = #["Date"]
+	
+	if(condition !== null && condition instanceof java.util.Map) {
+		val conditionMap = condition as java.util.Map<String,String>
+		if(!conditionMap.get("TextualFilterEntity").nullOrEmpty && stringParameters.contains(conditionMap.get("TextualFilterEntity"))   && !conditionMap.get("TextualOperator").nullOrEmpty && stringValue !== null) {
+				val filter = new org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>(conditionMap.get("TextualFilterEntity"),conditionMap.get("TextualOperator"), stringValue)
+				ReactPlatform.Reply("All right, "+filter.left+" "+filter.middle+" "+filter.right)	
+				airQualityDataFilters.add(filter)
+			}
+			else if(!conditionMap.get("NumericFilterEntity").nullOrEmpty && numericParameters.contains(conditionMap.get("NumericFilterEntity"))   && !conditionMap.get("NumericOperator").nullOrEmpty && !conditionMap.get("number").nullOrEmpty){
+					parameterMapping.get(conditionMap.get("NumericFilterEntity"))+" "+conditionMap.get("NumericOperator")+" "+conditionMap.get("number")
+					val filter = new org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>(conditionMap.get("NumericFilterEntity"),conditionMap.get("NumericOperator"), conditionMap.get("number"))
+					ReactPlatform.Reply("All right, "+filter.left+" "+filter.middle+" "+filter.right)	
+					airQualityDataFilters.add(filter)
+				
+				}
+			else if(!conditionMap.get("DateFilterEntity").nullOrEmpty && dateParameters.contains(conditionMap.get("DateFilterEntity"))   && !conditionMap.get("DateOperator").nullOrEmpty && !conditionMap.get("date").nullOrEmpty){
+					parameterMapping.get(conditionMap.get("DateFilterEntity"))+" "+conditionMap.get("DateFilterEntity")+" "+conditionMap.get("date")
+					val filter = new org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>(conditionMap.get("DateFilterEntity"),conditionMap.get("DateFilterEntity"), conditionMap.get("date"))
+					ReactPlatform.Reply("All right, "+filter.left+" "+filter.middle+" "+filter.right)	
+					airQualityDataFilters.add(filter)
+			}
+		}
+	
+	ReactPlatform.Reply("Which field do you want to show?",session.get("airQualityDataFieldOptions") as java.util.List<String>) 
+	
+	
+on intent FilterAirQualityDataIntent  do 
+	ReactPlatform.Reply("Choose a filter",session.get("airQualityDataFilterOptions") as java.util.List<String>)
+	
+on intent CallFucntionAirQualityDataIntent  do 
+	val function = context.get("AirQualityDataFunction").get("Function") 
+	val airQualityDataFilters = session.get("airQualityDataFilters") as java.util.List<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>>
+	val parameterMapping = session.get("airQualityDataParameterMapping") as java.util.Map<String,String>
+	val stringParameters = #["Municipality","Pollutant"]
+	val numericParameters = #["Magnitude","Year","month","day"]
+	val dateParameters = #["Date"]
+	val queryParameters = <String,Object> newHashMap
+	
+	if(!airQualityDataFilters.isEmpty){
+		val query = airQualityDataFilters.map[e | 
+			if(stringParameters.contains(e.left)) {
+				if(e.middle == "=") {
+				parameterMapping.get(e.left)+" = "+"'"+e.right+"'"	
+				} else if (e.middle == "starts with") {
+					parameterMapping.get(e.left)+" like '"+e.right+"%'"	
+				} else if (e.middle == "ends with") {
+					parameterMapping.get(e.left)+" like '%"+e.right+"'"	
+				} else {
+					parameterMapping.get(e.left)+" like '%"+e.right+"%'"	
+				}
+			}
+			else if(numericParameters.contains(e.left)){
+					parameterMapping.get(e.left)+" "+e.middle+" "+e.right
+				}
+			else if(dateParameters.contains(e.left)){
+				if(e.middle == "=") {
+					parameterMapping.get(e.left)+" = "+"'"+(e.right as String).substring(0,10)+"'"}
+			}
+		].join(" AND ")
+	
+		queryParameters.put("$where",query)
+	}
+	
+	if(function instanceof java.util.Map && !(function as java.util.Map).isEmpty() && (function as java.util.Map).get("FunctionEntity") !== null && (function as java.util.Map).get("NumericSelectFieldEntity") !== null) {
+		val functionMap = function as java.util.Map
+		queryParameters.put("$select",functionMap.get("FunctionEntity")+"("+parameterMapping.get(functionMap.get("NumericSelectFieldEntity"))+")")
+			}
+	
+	
+	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
+	if(response.status === 200){
+		val array = response.body.asJsonArray
+		val total = Double.valueOf(array.iterator.next.asJsonObject.entrySet.get(0).value.asString) 
+			ReactPlatform.Reply("Here you go "+total)
+	}
+	else {
+		ReactPlatform.Reply("Oops, something went wrong.")
+	}
+	
+on intent ChooseOptionAirQualityDataIntent  do 
+	val filterOption = context.get("AirQualityDataEntity").get("filterAirQualityDataEntity") as java.util.Map<String,String>
+	
+	if(!filterOption.get("TextualFilterEntity").nullOrEmpty){
+		session.put("filterAirQualityDataEntity",filterOption.get("TextualFilterEntity"))
+		ReactPlatform.Reply("Choose an operation",#["equals","starts with", "contains","ends with"])
+		}
+	if(!filterOption.get("NumericFilterEntity").nullOrEmpty){
+		session.put("filterAirQualityDataEntity",filterOption.get("NumericFilterEntity"))
+		ReactPlatform.Reply("Choose an operation",#["equals","greater than", "greater than or equal","less than","less than or equal"])
+		}
+	if(!filterOption.get("DateFilterEntity").nullOrEmpty){
+		session.put("filterAirQualityDataEntity",filterOption.get("DateFilterEntity"))
+		ReactPlatform.Reply("Choose an operation",#["equals","before", "after"])
+		}
+	
+on intent NoMoreFiltersAirQualityDataIntent  do 
+	ReactPlatform.Reply("Which field do you want to show?",session.get("airQualityDataFieldOptions") as java.util.List<String>) 		
+	
+on intent NoMoreSelectFieldAirQualityDataIntent  do 
+	//We retrieve the filters and select fields from the session
+	val airQualityDataFilters = session.get("airQualityDataFilters") as java.util.List<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>>
+	val airQualityDataFieldValues = session.get("airQualityDataFieldValues") as java.util.List<String>
+	
+	//We retrieve the parameter map which will help us to get fields real name to create the request
+	val parameterMapping = session.get("airQualityDataParameterMapping") as java.util.Map<String,String>
+	
+	//We create a list for each data type kind. This will help us to format the request
+	val stringParameters = #["Municipality","Pollutant"]
+	val numericParameters = #["Magnitude","Year","month","day"]
+	val dateParameters = #["Date"]
+	
+	//We init the query parameters
+	val queryParameters = <String,Object> newHashMap
+	val countParameters = <String,Object> newHashMap
+	
+	//We init the paging information
+	val limit = 10
+	val page = 1L
+	val offset = 0L
+	
+	//We store the paging information in the session
+	session.put("page", page)
+	
+	
+	countParameters.put("$select","count(*)")
+	queryParameters.put("$limit",limit)
+	
+	
+	queryParameters.put("$offset",offset)
+	
+	if(!airQualityDataFilters.isEmpty){
+		val query = airQualityDataFilters.map[e | 
+			if(stringParameters.contains(e.left)) {
+				if(e.middle == "=") {
+				parameterMapping.get(e.left)+" = "+"'"+e.right+"'"	
+				} else if (e.middle == "starts with") {
+					parameterMapping.get(e.left)+" like '"+e.right+"%'"	
+				} else if (e.middle == "ends with") {
+					parameterMapping.get(e.left)+" like '%"+e.right+"'"	
+				} else {
+					parameterMapping.get(e.left)+" like '%"+e.right+"%'"	
+				}
+			}
+			else if(numericParameters.contains(e.left)){
+					parameterMapping.get(e.left)+" "+e.middle+" "+e.right
+				}
+			else if(dateParameters.contains(e.left)){
+				if(e.middle == "=") {
+					parameterMapping.get(e.left)+" = "+"'"+(e.right as String).substring(0,10)+"'"}
+			}
+		].join(" AND ")[it.toString]
+	
+		queryParameters.put("$where",query)
+		countParameters.put("$where",query)
+	}
+	
+	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",countParameters,emptyMap,emptyMap) 
+	
+	if(countResponse.status === 200){
+		val countArray = countResponse.body.asJsonArray
+		val total = Long.valueOf(countArray.iterator.next.asJsonObject.get("count").asString) 
+		session.put("total",total) 
+		val pageCount = total / limit + 1
+		session.put("pageCound",pageCount)
+	
+		if(total > 0){
+		val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
+		if(response.status === 200){
+			ReactPlatform.Reply("Showing "+limit+" records of a total of "+total)
+			ReactPlatform.Reply("Page "+page+"/"+pageCount+". Write _next_ to see the next page")
+			val list = response.body.asJsonArray
+			val header = "|"+airQualityDataFieldValues.join("|")+"|"+"\n"+ "|" +airQualityDataFieldValues.map[e | "---"].join("|") + "|\n"
+			val data = list.map[e | 
+			"|" + airQualityDataFieldValuesmap[r | if(dateParameters.contains(r)) {e.asJsonObject.get(parameterMapping.get(r)).getAsString.substring(0,10)}
+							else   {e.asJsonObject.get(parameterMapping.get(r))}].join(" | ") + "|"
+						].join("\n")
+			ReactPlatform.Reply(header + data)
+		}
+		}
+		else {
+			ReactPlatform.Reply("Nothing found.")	
+		}
+	
+	} else {
+		ReactPlatform.Reply("Oops, something went wrong. The API responded with status "+ countResponse.status)	
+	}
+	
+	
+on intent ShowNextPageAirQualityDataIntent  do 
+	//We retrieve the filters and select fields from the session
+	val airQualityDataFilters = session.get("airQualityDataFilters") as java.util.List<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>>
+	val airQualityDataFieldValues = session.get("airQualityDataFieldValues") as java.util.List<String>
+	
+	//We retrieve the parameter map which will help us to get fields real name to create the request
+	val parameterMapping = session.get("airQualityDataParameterMapping") as java.util.Map<String,String>
+	
+	//We create a list for each data type kind. This will help us to format the request
+	val stringParameters = #["Municipality","Pollutant"]
+	val numericParameters = #["Magnitude","Year","month","day"]
+	val dateParameters = #["Date"]
+	
+	val queryParameters = <String,Object> newHashMap
+	
+	val orderBy = session.get("orderByAirQualityData")
+	val order = session.get("orderAirQualityData")
+	
+	
+	val orderValue = new StringBuffer
+	
+	if(orderBy !== null){
+		orderValue.append(parameterMapping.get(orderBy))
+		if(order !== null){
+			orderValue.append(" "+order)
+			}
+		}
+	if(!orderValue.toString.nullOrEmpty){
+		queryParameters.put("$order",orderValue.toString)
+		}
+		
+	
+	//We retrieve then update the paging information
+	val page = session.get("page") as Long
+	val limit = 10
+	val newPage = page + 1
+	val newOffset = page * limit
+	val pageCount = session.get("pageCound")
+	
+	//We store the paging information in the session
+	session.put("page", newPage)
+	
+	queryParameters.put("$limit",limit)
+	queryParameters.put("$offset",newOffset)
+	
+	if(orderBy!== null){
+		queryParameters.put("$order",parameterMapping.get(orderBy)+" "+order)
+		}
+	
+	
+	if(!airQualityDataFilters.isEmpty){
+		val query = airQualityDataFilters.map[e | 
+			if(stringParameters.contains(e.left)) {
+				if(e.middle == "=") {
+				parameterMapping.get(e.left)+" = "+"'"+e.right+"'"	
+				} else if (e.middle == "starts with") {
+					parameterMapping.get(e.left)+" like '"+e.right+"%'"	
+				} else if (e.middle == "ends with") {
+					parameterMapping.get(e.left)+" like '%"+e.right+"'"	
+				} else {
+					parameterMapping.get(e.left)+" like '%"+e.right+"%'"	
+				}
+			}
+			else if(numericParameters.contains(e.left)){
+					parameterMapping.get(e.left)+" "+e.middle+" "+e.right
+				}
+			else if(dateParameters.contains(e.left)){
+				if(e.middle == "=") {
+					parameterMapping.get(e.left)+" = "+"'"+(e.right as String).substring(0,10)+"'"}
+			}
+		].join(" AND ")[it.toString]
+		
+		queryParameters.put("$where",query)
+	}
+	
+	
+	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap)
+	if(response.status === 200){
+			ReactPlatform.Reply("Page "+newPage+"/"+pageCount+". Write _next_ to see the next page")
+			val list = response.body.asJsonArray
+			val header = "|"+airQualityDataFieldValues.join("|")+"|"+"\n"+ "|" +airQualityDataFieldValues.map[e | "---"].join("|") + "|\n"
+			val data = list.map[e | 
+			"|" + airQualityDataFieldValues.map[r | e.asJsonObject.get(parameterMapping.get(r))].join(" | ") + "|"
+			].join("\n")
+			ReactPlatform.Reply(header + data)
+			
+		}
+		else {
+			ReactPlatform.Reply("Oops, something went wrong. The API responded with status "+ response.status)	
+		}
+				
+	
+on intent StartOverIntent  do 
+	session.put("airQualityDataFilters",<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>> newArrayList)
+	val airQualityDataFilterOptions = newArrayList
+	airQualityDataFilterOptions.addAll(#["Municipality","Magnitude","Pollutant","Year","month","day","Date"])
+	session.put("airQualityDataFilterOptions",airQualityDataFilterOptions)
+	
+	val airQualityDataFieldOptions = newArrayList
+	airQualityDataFieldOptions.addAll(#["Station name","Municipality","Magnitude","Pollutant","Year","month","day","Date"])	
+	session.put("airQualityDataFieldOptions",airQualityDataFieldOptions)
+	
+	session.put("airQualityDataFieldValues",<String>newArrayList)
+	session.put("page", 1)
+	session.put("offset",0)
+	session.remove("orderByAirQualityData")
+	session.remove("orderAirQualityData")
+	ReactPlatform.Reply("All right, let's start again")
+	
+on intent ProvideValueAirQualityDataIntent  do 
+	val filterValue = context.get("AirQualityDataEntity").get("filterAirQualityDataValue") as String
+	val filterDateValue = context.get("AirQualityDataEntity").get("filterAirQualityDataDateValue") as String
+	val filterEntity = session.get("filterAirQualityDataEntity") as String
+	val filterOperator = session.get("filterAirQualityDataOperator") as String
+	
+	val queryParameters = session.get("airQualityDataFilters") as java.util.List<org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>>
+	
+	if(!filterDateValue.nullOrEmpty){
+			ReactPlatform.Reply("All right, "+filterEntity+" "+filterOperator+" "+filterDateValue.substring(0,10))
+			queryParameters.add( new org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>(filterEntity,filterOperator, filterDateValue))
+		} else {
+			ReactPlatform.Reply("All right, "+filterEntity+" "+filterOperator+" "+filterValue)
+			queryParameters.add( new org.apache.commons.lang3.tuple.ImmutableTriple<String,String, Object>(filterEntity,filterOperator, filterValue))
+		}
+	
+	
+	val options = session.get("airQualityDataFilterOptions") as java.util.List<String>
+	options.remove(session.get("filterAirQualityDataEntity") as String)
+	
+	ReactPlatform.Reply("All right, "+filterEntity+" "+filterOperator+" "+filterValue)
+	ReactPlatform.Reply("Do you want to add more filters?",#["I don't want to add filters", "add filters"])
+	
+on intent ProvideOperatorAirQualityDataIntent  do 
+	val filterOperator = context.get("AirQualityDataEntity").get("filterAirQualityDataOperator") as java.util.Map<String,String>
+	if(!filterOperator.get("TextualOperator").nullOrEmpty){
+		session.put("filterAirQualityDataOperator",filterOperator.get("TextualOperator"))
+		}
+	if(!filterOperator.get("NumericOperator").nullOrEmpty){
+		session.put("filterAirQualityDataOperator",filterOperator.get("NumericOperator"))
+		}
+	if(!filterOperator.get("DateOperator").nullOrEmpty){
+		session.put("filterAirQualityDataOperator",filterOperator.get("DateOperator"))
+		}
+	ReactPlatform.Reply("Which value do you want?")
+	
