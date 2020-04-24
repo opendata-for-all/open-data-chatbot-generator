@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature id="edu.uoc.som.oda.bot.generator.feature">
-      <category name="ODA Bot generator"/>
-   </feature>
-   <category-def name="ODA Bot generator" label="ODA Bot generator"/>
-   <repository-reference location="https://https://https://opendata-for-all.github.io/openapi-metamodel/openapi2/updates/" enabled="true" />
-</site>
