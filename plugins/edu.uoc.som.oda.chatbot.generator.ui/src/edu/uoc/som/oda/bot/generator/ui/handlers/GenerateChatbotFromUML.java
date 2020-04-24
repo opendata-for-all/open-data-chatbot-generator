@@ -18,8 +18,8 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import edu.uoc.som.oda.bot.generator.ODABotGenerator;
-import edu.uoc.som.oda.bot.generator.builder.ODABotGeneratorBuilder;
+import com.xatkit.opendata.generator.ODABotGenerator;
+import com.xatkit.opendata.generator.builder.ODABotGeneratorBuilder;
 import edu.uoc.som.oda.bot.generator.ui.ODABotGeneratorUIPlugin;
 
 public class GenerateChatbotFromUML extends AbstractHandler {
