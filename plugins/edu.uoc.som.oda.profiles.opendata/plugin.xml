@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated opendata.profile -->
+      <package
+            uri="http://uoc.edu/som/oda/profiles/opendata/1.0"
+            class="edu.uoc.som.oda.profiles.opendata.OpenDataProfilePackage"
+            genModel="resources/opendata.profile.genmodel"/>
+   </extension>
+   
+   
+   	<extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://ODA_PROFILES/"
+            target="platform:/plugin/edu.uoc.som.oda.profiles.opendata/resources/">
+      </mapping>
+   </extension>
+     <extension
+         point="org.eclipse.uml2.uml.generated_package">
+      <profile
+            location="pathmap://ODA_PROFILES/opendata.profile.uml#_bgjfUF4ZEeqZ2b8whOQ_qA"
+            uri="http://uoc.edu/som/oda/profiles/opendata/1.0">
+      </profile>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
+      <profile
+            description="Open Data profile"
+            name="Open Data"
+            path="pathmap://ODA_PROFILES/opendata.profile.uml">
+      </profile>
+   </extension>
+
+</plugin>
