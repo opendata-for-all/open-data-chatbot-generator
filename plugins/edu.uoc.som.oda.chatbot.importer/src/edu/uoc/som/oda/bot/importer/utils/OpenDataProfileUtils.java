@@ -2,9 +2,8 @@ package edu.uoc.som.oda.bot.importer.utils;
 
 import static java.util.Objects.nonNull;
 
-import edu.uoc.som.oda.profile.OpenDataAPIType;
-import edu.uoc.som.oda.profile.SocrataFieldType;
-import edu.uoc.som.oda.profile.SocrataFieldTypeKind;
+import edu.uoc.som.oda.profiles.opendata.OpenDataAPIType;
+import edu.uoc.som.oda.profiles.opendata.SocrataFieldTypeKind;
 
 import java.util.List;
 

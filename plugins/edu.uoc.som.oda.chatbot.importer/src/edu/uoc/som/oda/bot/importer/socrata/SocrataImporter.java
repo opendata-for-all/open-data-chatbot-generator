@@ -28,9 +28,9 @@ import edu.uoc.som.oda.bot.importer.utils.JsonUtils;
 import edu.uoc.som.oda.bot.importer.utils.OpenDataProfileUtils;
 import edu.uoc.som.oda.bot.importer.utils.UMLUtils;
 import edu.uoc.som.oda.bot.importer.utils.ChatbotProfileUtils;
-import edu.uoc.som.oda.profile.OpenDataAPIType;
-import edu.uoc.som.oda.profile.SocrataFieldType;
-import edu.uoc.som.oda.profile.SocrataFieldTypeKind;
+import edu.uoc.som.oda.profiles.opendata.OpenDataAPIType;
+import edu.uoc.som.oda.profiles.opendata.SocrataFieldType;
+import edu.uoc.som.oda.profiles.opendata.SocrataFieldTypeKind;
 
 import static java.util.Objects.nonNull;
 
