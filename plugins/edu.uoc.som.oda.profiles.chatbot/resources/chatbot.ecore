@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="chatbot" nsURI="http://som-research.uoc.edu/profiles/chatbot/1.0"
+    nsPrefix="chatbot">
+  <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <details key="originalName" value="ChatbotProfile"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EDataType" name="Integer" instanceClassName="java.lang.Integer"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceClassName="java.lang.Boolean"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Double" instanceClassName="java.lang.Double">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Real"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BotVocabulary">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputName" ordered="false"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="synonyms" ordered="false"
+        upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_NamedElement" ordered="false"
+        eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//NamedElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyConfig">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toExpose" ordered="false"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toFilterWith" ordered="false"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+        eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassConfig">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toExpose" ordered="false"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+        eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+  </eClassifiers>
+</ecore:EPackage>

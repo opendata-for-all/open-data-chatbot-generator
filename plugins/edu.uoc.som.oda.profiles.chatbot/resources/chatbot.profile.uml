@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+  <uml:Profile xmi:id="_8zK3wHyGEemaV87q0fd26g" name="ChatbotProfile" metaclassReference="_mD9fcHyHEemaV87q0fd26g _adQYcH0_EemCU627TT0glQ _LtKO8H1EEemCU627TT0glQ _LtLdEH1EEemCU627TT0glQ _ZU2zsH1EEemCU627TT0glQ _LiDgQH1GEemCU627TT0glQ _1sLuQH1HEemCU627TT0glQ _L0cxQIbdEemJAf1U_0U40g __wheMK5hEemJ57URG_4tkw _KWjC4ENpEeqMk-1wskQguw">
+    <eAnnotations xmi:id="_lDYWwHyIEemaV87q0fd26g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <eAnnotations xmi:id="_adKR0H0_EemCU627TT0glQ" source="PapyrusVersion">
+        <details xmi:id="_adKR0X0_EemCU627TT0glQ" key="Version" value="0.0.0"/>
+        <details xmi:id="_adKR0n0_EemCU627TT0glQ" key="Comment" value="&lt;undefined>"/>
+        <details xmi:id="_adKR030_EemCU627TT0glQ" key="Copyright" value=""/>
+        <details xmi:id="_adKR1H0_EemCU627TT0glQ" key="Date" value=""/>
+        <details xmi:id="_adKR1X0_EemCU627TT0glQ" key="Author" value="&lt;undefined>"/>
+      </eAnnotations>
+    </eAnnotations>
+    <elementImport xmi:id="_mD9fcHyHEemaV87q0fd26g" alias="Model">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Model"/>
+    </elementImport>
+    <elementImport xmi:id="_adQYcH0_EemCU627TT0glQ" alias="Class">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </elementImport>
+    <elementImport xmi:id="_LtKO8H1EEemCU627TT0glQ" alias="PrimitiveType">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#PrimitiveType"/>
+    </elementImport>
+    <elementImport xmi:id="_LtLdEH1EEemCU627TT0glQ" alias="Enumeration">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Enumeration"/>
+    </elementImport>
+    <elementImport xmi:id="_ZU2zsH1EEemCU627TT0glQ" alias="Property">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+    </elementImport>
+    <elementImport xmi:id="_LiDgQH1GEemCU627TT0glQ" alias="Operation">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+    </elementImport>
+    <elementImport xmi:id="_1sLuQH1HEemCU627TT0glQ" alias="Parameter">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Parameter"/>
+    </elementImport>
+    <elementImport xmi:id="_L0cxQIbdEemJAf1U_0U40g" alias="Type">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Type"/>
+    </elementImport>
+    <elementImport xmi:id="__wheMK5hEemJ57URG_4tkw" alias="Association">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+    </elementImport>
+    <elementImport xmi:id="_KWjC4ENpEeqMk-1wskQguw" alias="NamedElement">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+    </elementImport>
+    <packageImport xmi:id="_9FTJkHyGEemaV87q0fd26g">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_9FTwoHyGEemaV87q0fd26g">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_PuqOwIa2EemJAf1U_0U40g" name="Integer"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_YOStgIa2EemJAf1U_0U40g" name="Boolean"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_depM0Ia2EemJAf1U_0U40g" name="Real"/>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_-KNIAENLEeqnD_vI3FyI2w" name="BotVocabulary">
+      <ownedAttribute xmi:id="_KQYPoENMEeqnD_vI3FyI2w" name="outputName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WbC1sENMEeqnD_vI3FyI2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_XUXkMENpEeqMk-1wskQguw" name="synonyms">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XUXkMUNpEeqMk-1wskQguw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hu6QcENpEeqMk-1wskQguw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_rOJTgEREEeqS891fCWkpNg" name="base_NamedElement" association="_rOIFYEREEeqS891fCWkpNg">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rOJTgUREEeqS891fCWkpNg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_nvLJwENpEeqMk-1wskQguw" name="PropertyConfig">
+      <ownedAttribute xmi:id="_2aMzwENpEeqMk-1wskQguw" name="toExpose">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2aMzwUNpEeqMk-1wskQguw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_HmuUsENrEeqMk-1wskQguw" name="toFilterWith">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HmuUsUNrEeqMk-1wskQguw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_qX9SYEREEeqS891fCWkpNg" name="base_Property" association="_qXvP8EREEeqS891fCWkpNg">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qX9SYUREEeqS891fCWkpNg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_et54UEQ_EeqS891fCWkpNg"/>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_qXvP8EREEeqS891fCWkpNg" name="E_PropertyConfig_Property1" memberEnd="_qX7dMEREEeqS891fCWkpNg _qX9SYEREEeqS891fCWkpNg">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_qX7dMEREEeqS891fCWkpNg" name="extension_PropertyConfig" type="_nvLJwENpEeqMk-1wskQguw" aggregation="composite" association="_qXvP8EREEeqS891fCWkpNg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_rOIFYEREEeqS891fCWkpNg" name="E_BotVocabulary_NamedElement22" memberEnd="_rOIscEREEeqS891fCWkpNg _rOJTgEREEeqS891fCWkpNg">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_rOIscEREEeqS891fCWkpNg" name="extension_BotVocabulary" type="_-KNIAENLEeqnD_vI3FyI2w" aggregation="composite" association="_rOIFYEREEeqS891fCWkpNg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_MR3hAFeqEeqAbujxkiIJqg" name="ClassConfig">
+      <ownedAttribute xmi:id="_T2M1IFeqEeqAbujxkiIJqg" name="toExpose">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_T2M1IVeqEeqAbujxkiIJqg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_i6D14FeqEeqAbujxkiIJqg" name="base_Class" association="_i6AykFeqEeqAbujxkiIJqg">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i6D14VeqEeqAbujxkiIJqg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_i6AykFeqEeqAbujxkiIJqg" name="E_ClassConfig_Class24" memberEnd="_i6DO0FeqEeqAbujxkiIJqg _i6D14FeqEeqAbujxkiIJqg">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_i6DO0FeqEeqAbujxkiIJqg" name="extension_ClassConfig" type="_MR3hAFeqEeqAbujxkiIJqg" aggregation="composite" association="_i6AykFeqEeqAbujxkiIJqg"/>
+    </packagedElement>
+    <profileApplication xmi:id="_V7D-gIO0EemwsPbmDx6KRQ">
+      <eAnnotations xmi:id="_V7NIcIO0EemwsPbmDx6KRQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Profile>
+  <Ecore:EPackage xmi:id="_Wl9VoIO0EemwsPbmDx6KRQ" base_Package="_8zK3wHyGEemaV87q0fd26g" packageName="chatbot" nsPrefix="chatbot" nsURI="http://som-research.uoc.edu/profiles/chatbot/1.0" basePackage="edu.uoc.som.oda.profiles" prefix="ChatbotProfile"/>
+  <Ecore:EDataType xmi:id="_Tyc0UIa2EemJAf1U_0U40g" instanceClassName="java.lang.Integer" base_PrimitiveType="_PuqOwIa2EemJAf1U_0U40g" dataTypeName="Integer"/>
+  <Ecore:EDataType xmi:id="_YOTUkIa2EemJAf1U_0U40g" instanceClassName="java.lang.Boolean" base_PrimitiveType="_YOStgIa2EemJAf1U_0U40g" dataTypeName="Boolean"/>
+  <Ecore:EDataType xmi:id="_depz4Ia2EemJAf1U_0U40g" instanceClassName="java.lang.Double" base_PrimitiveType="_depM0Ia2EemJAf1U_0U40g" dataTypeName="Double"/>
+</xmi:XMI>
