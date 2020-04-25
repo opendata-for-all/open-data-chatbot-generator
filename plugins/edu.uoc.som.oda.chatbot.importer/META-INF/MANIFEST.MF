@@ -10,8 +10,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.uml2.uml;bundle-version="5.5.0",
  com.google.gson;bundle-version="2.8.2",
  edu.uoc.som.oda.profiles.opendata;visibility:=reexport,
- com.xatkit.chatbot.profile;bundle-version="1.0.0";visibility:=reexport,
- edu.uoc.som.wapiml;bundle-version="1.2.0";visibility:=reexport
+ edu.uoc.som.oda.profiles.chatbot;bundle-version="1.0.0"
 Export-Package: edu.uoc.som.oda.bot.importer,
  edu.uoc.som.oda.bot.importer.resource,
  edu.uoc.som.oda.bot.importer.socrata
