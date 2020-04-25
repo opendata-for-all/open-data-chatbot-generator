@@ -34,7 +34,7 @@ public abstract class OpenDataImporter<T> {
 		
 		openDataResourceSet = OpenDataImporterResource.getUMResourceSet();
 		chatbotProfileResource =  openDataResourceSet
-				.getResource(URI.createURI("pathmap://XATKIT_PROFILES/chatbot.profile.uml"), true);
+				.getResource(URI.createURI("pathmap://CHATBOT_PROFILES/chatbot.profile.uml"), true);
 		openDataProfileResoure =  openDataResourceSet
 				.getResource(URI.createURI("pathmap://ODA_PROFILES/opendata.profile.uml"), true);
 		

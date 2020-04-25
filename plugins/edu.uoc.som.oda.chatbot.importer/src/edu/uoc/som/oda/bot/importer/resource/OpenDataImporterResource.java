@@ -24,7 +24,7 @@ public class OpenDataImporterResource {
 			// Check if we are inside eclipse or in a standalone mode
 			try {
 
-				URI.createPlatformPluginURI("edu.uoc.som.openapi2.profile/resources/openapi.profile.uml", true);
+				URI.createPlatformPluginURI("edu.uoc.som.oda.profiles.opendata/resources/openapi.profile.uml", true);
 
 				standalone = false;
 			} catch (Exception e) {
@@ -54,11 +54,11 @@ public class OpenDataImporterResource {
 						URI.createURI("pathmap://OPENAPI_PROFILES/openapi.profile.uml"), URI.createPlatformPluginURI(
 								"edu.uoc.som.openapi2.profile/resources/openapi.profile.uml", true));
 				umlResourceSet.getURIConverter().getURIMap().put(
-						URI.createURI("pathmap://XATKIT_PROFILES/chatbot.profile.uml"),
-						URI.createPlatformPluginURI("com.xatkit.chatbot.profile/resources/chatbot.profile.uml", true));
+						URI.createURI("pathmap://CHATBOT_PROFILES/chatbot.profile.uml"),
+						URI.createPlatformPluginURI("edu.uoc.som.oda.profiles.chatbot/resources/chatbot.profile.uml", true));
 				umlResourceSet.getURIConverter().getURIMap().put(
 						URI.createURI("pathmap://ODA_PROFILES/opendata.profile.uml"),
-						URI.createPlatformPluginURI("edu.uoc.som.oda.profile/resources/opendata.profile.uml", true));
+						URI.createPlatformPluginURI("edu.uoc.som.oda.profiles.opendata/resources/opendata.profile.uml", true));
 			}
 
 		}

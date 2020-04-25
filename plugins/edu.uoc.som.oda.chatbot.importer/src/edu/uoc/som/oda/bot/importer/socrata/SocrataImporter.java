@@ -1,5 +1,7 @@
 package edu.uoc.som.oda.bot.importer.socrata;
 
+import static java.util.Objects.nonNull;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -16,7 +18,6 @@ import org.eclipse.uml2.uml.PrimitiveType;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.UMLFactory;
-import org.eclipse.uml2.uml.UMLPackage;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -24,15 +25,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 
 import edu.uoc.som.oda.bot.importer.OpenDataImporter;
+import edu.uoc.som.oda.bot.importer.utils.ChatbotProfileUtils;
 import edu.uoc.som.oda.bot.importer.utils.JsonUtils;
 import edu.uoc.som.oda.bot.importer.utils.OpenDataProfileUtils;
 import edu.uoc.som.oda.bot.importer.utils.UMLUtils;
-import edu.uoc.som.oda.bot.importer.utils.ChatbotProfileUtils;
 import edu.uoc.som.oda.profiles.opendata.OpenDataAPIType;
-import edu.uoc.som.oda.profiles.opendata.SocrataFieldType;
 import edu.uoc.som.oda.profiles.opendata.SocrataFieldTypeKind;
-
-import static java.util.Objects.nonNull;
 
 public class SocrataImporter extends OpenDataImporter<JsonElement> {
 
