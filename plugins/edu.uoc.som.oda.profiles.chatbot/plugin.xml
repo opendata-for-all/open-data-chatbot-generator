@@ -14,5 +14,29 @@
             class="edu.uoc.som.oda.profiles.chatbot.ChatbotProfilePackage"
             genModel="resources/chatbot.profile.genmodel"/>
    </extension>
+   
+   
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://CHATBOT_PROFILES/"
+            target="platform:/plugin/edu.uoc.som.oda.profiles.chatbot/resources/">
+      </mapping>
+   </extension>
+     <extension
+         point="org.eclipse.uml2.uml.generated_package">
+      <profile
+            location="pathmap://CHATBOT_PROFILES/chatbot.profile.uml#_8zK3wHyGEemaV87q0fd26g"
+            uri="http://som-research.uoc.edu/profiles/chatbot/1.0">
+      </profile>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
+      <profile
+            description="Chatbot profile"
+            name="Chatbot"
+            path="pathmap://CHATBOT_PROFILES/chatbot.profile.uml">
+      </profile>
+   </extension>
 
 </plugin>
