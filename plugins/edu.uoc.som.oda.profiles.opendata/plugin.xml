@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated opendata.profile -->
       <package
-            uri="http://uoc.edu/som/oda/profiles/opendata/1.0"
+            uri="http://som-research.uoc.edu/profiles/opendata/1.0"
             class="edu.uoc.som.oda.profiles.opendata.OpenDataProfilePackage"
             genModel="resources/opendata.profile.genmodel"/>
    </extension>
@@ -26,7 +26,7 @@
          point="org.eclipse.uml2.uml.generated_package">
       <profile
             location="pathmap://ODA_PROFILES/opendata.profile.uml#_bgjfUF4ZEeqZ2b8whOQ_qA"
-            uri="http://uoc.edu/som/oda/profiles/opendata/1.0">
+            uri="http://som-research.uoc.edu/profiles/opendata/1.0">
       </profile>
    </extension>
    <extension

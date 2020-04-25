@@ -40,7 +40,7 @@ public interface OpenDataProfilePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://uoc.edu/som/oda/profiles/opendata/1.0";
+	String eNS_URI = "http://som-research.uoc.edu/profiles/opendata/1.0";
 
 	/**
 	 * The package namespace name.

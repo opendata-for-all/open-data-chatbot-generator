@@ -143,5 +143,5 @@
       <appliedProfile href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
     </profileApplication>
   </uml:Profile>
-  <Ecore:EPackage xmi:id="_q0GvoF4eEeqZ2b8whOQ_qA" base_Package="_bgjfUF4ZEeqZ2b8whOQ_qA" packageName="opendata" nsPrefix="profile" nsURI="http://uoc.edu/som/oda/profiles/opendata/1.0" basePackage="edu.uoc.som.oda.profiles" prefix="OpenDataProfile"/>
+  <Ecore:EPackage xmi:id="_q0GvoF4eEeqZ2b8whOQ_qA" base_Package="_bgjfUF4ZEeqZ2b8whOQ_qA" packageName="opendata" nsPrefix="profile" nsURI="http://som-research.uoc.edu/profiles/opendata/1.0" basePackage="edu.uoc.som.oda.profiles" prefix="OpenDataProfile"/>
 </xmi:XMI>
