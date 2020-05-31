@@ -124,7 +124,7 @@ on intent OrderByAirQualityDataIntent  do
 	
 	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",countParameters,emptyMap,emptyMap) 
 	
-	if(countResponse.status === 200){
+	if(countResponse.status == 200){
 		val countArray = countResponse.body.asJsonArray
 		val total = Long.valueOf(countArray.iterator.next.asJsonObject.get("count").asString) 
 		session.put("total",total) 
@@ -133,13 +133,13 @@ on intent OrderByAirQualityDataIntent  do
 	
 		if(total > 0){
 	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
-	if(response.status === 200){
+	if(response.status == 200){
 		ReactPlatform.Reply("Showing "+limit+" records of a total of "+total)
 		ReactPlatform.Reply("Page "+page+"/"+pageCount+". Write _next_ to see the next page")
 		val list = response.body.asJsonArray
 		val header = "|"+airQualityDataFieldValues.join("|")+"|"+"\n"+ "|" +airQualityDataFieldValues.map[e | "---"].join("|") + "|\n"
 		val data = list.map[e | 
-		"|" + airQualityDataFieldValuesmap[r | if(dateParameters.contains(r)) {e.asJsonObject.get(parameterMapping.get(r)).getAsString.substring(0,10)}
+		"|" + airQualityDataFieldValues.map[r | if(dateParameters.contains(r)) {e.asJsonObject.get(parameterMapping.get(r)).getAsString.substring(0,10)}
 						else   {e.asJsonObject.get(parameterMapping.get(r))}].join(" | ") + "|"
 					].join("\n")
 		ReactPlatform.Reply(header + data)
@@ -252,7 +252,7 @@ on intent AddPostOperationFilterAirQualityDataIntent  do
 	
 	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",countParameters,emptyMap,emptyMap) 
 	
-	if(countResponse.status === 200){
+	if(countResponse.status == 200){
 		val countArray = countResponse.body.asJsonArray
 		val total = Long.valueOf(countArray.iterator.next.asJsonObject.get("count").asString) 
 		session.put("total",total) 
@@ -261,13 +261,13 @@ on intent AddPostOperationFilterAirQualityDataIntent  do
 	
 		if(total > 0){
 	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
-	if(response.status === 200){
+	if(response.status == 200){
 		ReactPlatform.Reply("Showing "+limit+" records of a total of "+total)
 		ReactPlatform.Reply("Page "+page+"/"+pageCount+". Write _next_ to see the next page")
 		val list = response.body.asJsonArray
 		val header = "|"+airQualityDataFieldValues.join("|")+"|"+"\n"+ "|" +airQualityDataFieldValues.map[e | "---"].join("|") + "|\n"
 		val data = list.map[e | 
-		"|" + airQualityDataFieldValuesmap[r | if(dateParameters.contains(r)) {e.asJsonObject.get(parameterMapping.get(r)).getAsString.substring(0,10)}
+		"|" + airQualityDataFieldValues.map[r | if(dateParameters.contains(r)) {e.asJsonObject.get(parameterMapping.get(r)).getAsString.substring(0,10)}
 						else   {e.asJsonObject.get(parameterMapping.get(r))}].join(" | ") + "|"
 					].join("\n")
 		ReactPlatform.Reply(header + data)
@@ -413,7 +413,7 @@ on intent CallFucntionAirQualityDataIntent  do
 	
 	
 	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
-	if(response.status === 200){
+	if(response.status == 200){
 		val array = response.body.asJsonArray
 		val total = Double.valueOf(array.iterator.next.asJsonObject.entrySet.get(0).value.asString) 
 			ReactPlatform.Reply("Here you go "+total)
@@ -427,15 +427,15 @@ on intent ChooseOptionAirQualityDataIntent  do
 	
 	if(!filterOption.get("TextualFilterEntity").nullOrEmpty){
 		session.put("filterAirQualityDataEntity",filterOption.get("TextualFilterEntity"))
-		ReactPlatform.Reply("Choose an operation",#["equals","starts with", "contains","ends with"])
+		ReactPlatform.Reply("Choose an operator",#["equals","starts with", "contains","ends with"])
 		}
 	if(!filterOption.get("NumericFilterEntity").nullOrEmpty){
 		session.put("filterAirQualityDataEntity",filterOption.get("NumericFilterEntity"))
-		ReactPlatform.Reply("Choose an operation",#["equals","greater than", "greater than or equal","less than","less than or equal"])
+		ReactPlatform.Reply("Choose an operator",#["equals","greater than", "greater than or equal","less than","less than or equal"])
 		}
 	if(!filterOption.get("DateFilterEntity").nullOrEmpty){
 		session.put("filterAirQualityDataEntity",filterOption.get("DateFilterEntity"))
-		ReactPlatform.Reply("Choose an operation",#["equals","before", "after"])
+		ReactPlatform.Reply("Choose an operator",#["equals","before", "after"])
 		}
 	
 on intent NoMoreFiltersAirQualityDataIntent  do 
@@ -501,7 +501,7 @@ on intent NoMoreSelectFieldAirQualityDataIntent  do
 	
 	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",countParameters,emptyMap,emptyMap) 
 	
-	if(countResponse.status === 200){
+	if(countResponse.status == 200){
 		val countArray = countResponse.body.asJsonArray
 		val total = Long.valueOf(countArray.iterator.next.asJsonObject.get("count").asString) 
 		session.put("total",total) 
@@ -510,13 +510,13 @@ on intent NoMoreSelectFieldAirQualityDataIntent  do
 	
 		if(total > 0){
 		val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
-		if(response.status === 200){
+		if(response.status == 200){
 			ReactPlatform.Reply("Showing "+limit+" records of a total of "+total)
 			ReactPlatform.Reply("Page "+page+"/"+pageCount+". Write _next_ to see the next page")
 			val list = response.body.asJsonArray
 			val header = "|"+airQualityDataFieldValues.join("|")+"|"+"\n"+ "|" +airQualityDataFieldValues.map[e | "---"].join("|") + "|\n"
 			val data = list.map[e | 
-			"|" + airQualityDataFieldValuesmap[r | if(dateParameters.contains(r)) {e.asJsonObject.get(parameterMapping.get(r)).getAsString.substring(0,10)}
+			"|" + airQualityDataFieldValues.map[r | if(dateParameters.contains(r)) {e.asJsonObject.get(parameterMapping.get(r)).getAsString.substring(0,10)}
 							else   {e.asJsonObject.get(parameterMapping.get(r))}].join(" | ") + "|"
 						].join("\n")
 			ReactPlatform.Reply(header + data)
@@ -608,7 +608,7 @@ on intent ShowNextPageAirQualityDataIntent  do
 	
 	
 	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap)
-	if(response.status === 200){
+	if(response.status == 200){
 			ReactPlatform.Reply("Page "+newPage+"/"+pageCount+". Write _next_ to see the next page")
 			val list = response.body.asJsonArray
 			val header = "|"+airQualityDataFieldValues.join("|")+"|"+"\n"+ "|" +airQualityDataFieldValues.map[e | "---"].join("|") + "|\n"
@@ -660,7 +660,7 @@ on intent ProvideValueAirQualityDataIntent  do
 	val options = session.get("airQualityDataFilterOptions") as java.util.List<String>
 	options.remove(session.get("filterAirQualityDataEntity") as String)
 	
-	ReactPlatform.Reply("All right, "+filterEntity+" "+filterOperator+" "+filterValue)
+
 	ReactPlatform.Reply("Do you want to add more filters?",#["I don't want to add filters", "add filters"])
 	
 on intent ProvideOperatorAirQualityDataIntent  do 
