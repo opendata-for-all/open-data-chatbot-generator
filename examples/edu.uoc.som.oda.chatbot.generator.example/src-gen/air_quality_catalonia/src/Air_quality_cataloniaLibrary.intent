@@ -27,6 +27,7 @@ composite FilterEntity {
 }
 
 mapping TextualSelectFieldEntity {
+	value "Station name" 
 	value "Municipality"  synonyms: "town" "city" 
 	value "Pollutant" 
 }
@@ -111,21 +112,6 @@ intent SearchAirQualityDataIntent {
 	creates context "showOrFilterAirQualityData" with lifespan 2
 }
 
-intent OrderByAirQualityDataIntent {
-	requires context "showResultAirQualityData"
-	inputs {
-		"sort by FIELD"
-		"order by FIELD"
-		"sort by FIELD ORDER"
-		"order by FIELD ORDER"
-	}
-	creates context "AirQualityDataOrder"  {
-		sets parameter "orderField" from fragment "FIELD" (entity SelectFieldEntity)
-		sets parameter "orderValue" from fragment "ORDER" (entity OrderEntity)
-	}
-	creates context "showResultAirQualityData" with lifespan 2
-}
-
 intent AddPostOperationFilterAirQualityDataIntent {
 	requires context "showResultAirQualityData"
 	inputs {
@@ -140,23 +126,21 @@ intent AddPostOperationFilterAirQualityDataIntent {
 	creates context "showResultAirQualityData" with lifespan 2
 }
 
-intent ChooseAirQualityDataSelectOptionsIntent {
-	requires context "addFieldAirQualityData"
+intent ProvideOperatorAirQualityDataIntent {
+	requires context "airQualityDataFilterOperator"
 	inputs {
-		"VALUE"
+		"OPERATOR"
 	}
 	creates context "AirQualityDataEntity"  {
-		sets parameter "fieldAirQualityDataValue" from fragment "VALUE" (entity SelectFieldEntity)
+		sets parameter "filterAirQualityDataOperator" from fragment "OPERATOR" (entity Operator)
 	}
-	creates context "showSelectOptionsAirQualityData" with lifespan 2
+	creates context "airQualityDataFilterValue" with lifespan 2
 }
 
-intent SelectFieldAirQualityDataIntent {
-	requires context "showSelectOptionsAirQualityData"
+intent StartOverIntent {
 	inputs {
-		"add fields"
+		"Start over"
 	}
-	creates context "addFieldAirQualityData" with lifespan 2
 }
 
 intent SearchAllAirQualityDataIntent {
@@ -176,21 +160,27 @@ intent SearchAllAirQualityDataIntent {
 	creates context "addFieldAirQualityData" with lifespan 2
 }
 
-intent FilterAirQualityDataIntent {
-	requires context "showOrFilterAirQualityData"
+intent SelectFieldAirQualityDataIntent {
+	requires context "showSelectOptionsAirQualityData"
 	inputs {
-		"add filters"
+		"add fields"
 	}
-	creates context "addFilterAirQualityData" 
+	creates context "addFieldAirQualityData" with lifespan 2
 }
 
-intent CallFucntionAirQualityDataIntent {
+intent NoMoreFiltersAirQualityDataIntent {
+	requires context "showOrFilterAirQualityData"
+	inputs {
+		"I don't want to add filters"
+	}
+	creates context "addFieldAirQualityData" with lifespan 2
+}
+
+intent ShowNextPageAirQualityDataIntent {
 	requires context "showResultAirQualityData"
 	inputs {
-		"calculate average number"
-	}
-	creates context "AirQualityDataFunction"  {
-		sets parameter "Function" from fragment "average number" (entity Function)
+		"next"
+		"show me next page"
 	}
 	creates context "showResultAirQualityData" with lifespan 2
 }
@@ -206,35 +196,23 @@ intent ChooseOptionAirQualityDataIntent {
 	creates context "airQualityDataFilterOperator" with lifespan 2
 }
 
-intent NoMoreFiltersAirQualityDataIntent {
+intent ChooseAirQualityDataSelectOptionsIntent {
+	requires context "addFieldAirQualityData"
+	inputs {
+		"VALUE"
+	}
+	creates context "AirQualityDataEntity"  {
+		sets parameter "fieldAirQualityDataValue" from fragment "VALUE" (entity SelectFieldEntity)
+	}
+	creates context "showSelectOptionsAirQualityData" with lifespan 2
+}
+
+intent FilterAirQualityDataIntent {
 	requires context "showOrFilterAirQualityData"
 	inputs {
-		"I don't want to add filters"
+		"add filters"
 	}
-	creates context "addFieldAirQualityData" with lifespan 2
-}
-
-intent NoMoreSelectFieldAirQualityDataIntent {
-	requires context "showSelectOptionsAirQualityData"
-	inputs {
-		"Just show me the list"
-	}
-	creates context "showResultAirQualityData" with lifespan 2
-}
-
-intent ShowNextPageAirQualityDataIntent {
-	requires context "showResultAirQualityData"
-	inputs {
-		"next"
-		"show me next page"
-	}
-	creates context "showResultAirQualityData" with lifespan 2
-}
-
-intent StartOverIntent {
-	inputs {
-		"Start over"
-	}
+	creates context "addFilterAirQualityData" 
 }
 
 intent ProvideValueAirQualityDataIntent {
@@ -250,13 +228,36 @@ intent ProvideValueAirQualityDataIntent {
 	creates context "showOrFilterAirQualityData" with lifespan 2
 }
 
-intent ProvideOperatorAirQualityDataIntent {
-	requires context "airQualityDataFilterOperator"
+intent CallFucntionAirQualityDataIntent {
+	requires context "showResultAirQualityData"
 	inputs {
-		"OPERATOR"
+		"calculate average number"
 	}
-	creates context "AirQualityDataEntity"  {
-		sets parameter "filterAirQualityDataOperator" from fragment "OPERATOR" (entity Operator)
+	creates context "AirQualityDataFunction"  {
+		sets parameter "Function" from fragment "average number" (entity Function)
 	}
-	creates context "airQualityDataFilterValue" with lifespan 2
+	creates context "showResultAirQualityData" with lifespan 2
+}
+
+intent NoMoreSelectFieldAirQualityDataIntent {
+	requires context "showSelectOptionsAirQualityData"
+	inputs {
+		"Just show me the list"
+	}
+	creates context "showResultAirQualityData" with lifespan 2
+}
+
+intent OrderByAirQualityDataIntent {
+	requires context "showResultAirQualityData"
+	inputs {
+		"sort by FIELD"
+		"order by FIELD"
+		"sort by FIELD ORDER"
+		"order by FIELD ORDER"
+	}
+	creates context "AirQualityDataOrder"  {
+		sets parameter "orderField" from fragment "FIELD" (entity SelectFieldEntity)
+		sets parameter "orderValue" from fragment "ORDER" (entity OrderEntity)
+	}
+	creates context "showResultAirQualityData" with lifespan 2
 }
