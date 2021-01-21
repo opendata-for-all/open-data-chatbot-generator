@@ -126,7 +126,7 @@ on intent AddPostOperationFilterAirQualityDataIntent  do
 		countParameters.put("$where",query)
 	}
 	
-	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",countParameters,emptyMap,emptyMap) 
+	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/tasf-thgu",countParameters,emptyMap,emptyMap) 
 	
 	if(countResponse.status == 200){
 		val countArray = countResponse.body.asJsonArray
@@ -136,7 +136,7 @@ on intent AddPostOperationFilterAirQualityDataIntent  do
 		session.put("pageCound",pageCount)
 	
 		if(total > 0){
-	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
+	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/tasf-thgu",queryParameters,emptyMap,emptyMap) 
 	if(response.status == 200){
 		ReactPlatform.Reply("Showing "+limit+" records of a total of "+total)
 		ReactPlatform.Reply("Page "+page+"/"+pageCount+". Write _next_ to see the next page")
@@ -329,7 +329,7 @@ on intent ShowNextPageAirQualityDataIntent  do
 	}
 	
 	
-	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap)
+	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/tasf-thgu",queryParameters,emptyMap,emptyMap)
 	if(response.status == 200){
 			ReactPlatform.Reply("Page "+newPage+"/"+pageCount+". Write _next_ to see the next page")
 			val list = response.body.asJsonArray
@@ -452,7 +452,7 @@ on intent CallFucntionAirQualityDataIntent  do
 			}
 	
 	
-	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
+	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/tasf-thgu",queryParameters,emptyMap,emptyMap) 
 	if(response.status == 200){
 		val array = response.body.asJsonArray
 		val total = Double.valueOf(array.iterator.next.asJsonObject.entrySet.get(0).value.asString) 
@@ -520,7 +520,7 @@ on intent NoMoreSelectFieldAirQualityDataIntent  do
 		countParameters.put("$where",query)
 	}
 	
-	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",countParameters,emptyMap,emptyMap) 
+	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/tasf-thgu",countParameters,emptyMap,emptyMap) 
 	
 	if(countResponse.status == 200){
 		val countArray = countResponse.body.asJsonArray
@@ -530,7 +530,7 @@ on intent NoMoreSelectFieldAirQualityDataIntent  do
 		session.put("pageCound",pageCount)
 	
 		if(total > 0){
-		val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
+		val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/tasf-thgu",queryParameters,emptyMap,emptyMap) 
 		if(response.status == 200){
 			ReactPlatform.Reply("Showing "+limit+" records of a total of "+total)
 			ReactPlatform.Reply("Page "+page+"/"+pageCount+". Write _next_ to see the next page")
@@ -645,7 +645,7 @@ on intent OrderByAirQualityDataIntent  do
 		countParameters.put("$where",query)
 	}
 	
-	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",countParameters,emptyMap,emptyMap) 
+	val countResponse = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/tasf-thgu",countParameters,emptyMap,emptyMap) 
 	
 	if(countResponse.status == 200){
 		val countArray = countResponse.body.asJsonArray
@@ -655,7 +655,7 @@ on intent OrderByAirQualityDataIntent  do
 		session.put("pageCound",pageCount)
 	
 		if(total > 0){
-	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/uy6k-2s8r",queryParameters,emptyMap,emptyMap) 
+	val response = RestPlatform.GetJsonRequest("https://analisi.transparenciacatalunya.cat/resource/tasf-thgu",queryParameters,emptyMap,emptyMap) 
 	if(response.status == 200){
 		ReactPlatform.Reply("Showing "+limit+" records of a total of "+total)
 		ReactPlatform.Reply("Page "+page+"/"+pageCount+". Write _next_ to see the next page")
