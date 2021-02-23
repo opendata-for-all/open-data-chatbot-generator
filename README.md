@@ -1,2 +1,2 @@
 # open-data-chatbot-generator
-A tool to generates chatbots to query Open Data sources
+A tool to generate chatbots to query Open Data sources
